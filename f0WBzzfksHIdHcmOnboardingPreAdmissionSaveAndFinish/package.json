@@ -1,0 +1,15 @@
+{
+    "name": "f0WBzzfksHIdHcmOnboardingPreAdmissionSaveAndFinish",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": ""
+    },
+    "author": "",
+    "license": "",
+    "dependencies": {
+        "@seniorsistemas/fsw-aws-lambda": "^0.0.9",
+        "numero-por-extenso": "^1.0.8"
+    }
+}
