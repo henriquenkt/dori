@@ -101,17 +101,12 @@ exports.handler = async (event) => {
       texto += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}\n` : '';
       texto += horario === 9998 && sequencia === 6 && !entrada ? 'Sábado: Compensado\n' : ``;
       texto += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA\n` : '';
-
-      
     }
 
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
     return sendRes(erro.response.status, "Erro ao processar API clockingEventOfWorkSchedule:" + erro.response.statusText);
-  } finally {
-    console.log("Execução do bloco try/catch finalizada.");
-  }
-
+  } 
 
   // Carrega dados da pré-admissão
   try {
@@ -119,8 +114,6 @@ exports.handler = async (event) => {
   } catch (erro) {
     console.error("Erro ao processar API preAdmissionQuery:", erro.response.statusText);
     return sendRes(erro.response.status, "Erro ao processar API preAdmissionQuery:" + erro.response.statusText);
-  } finally {
-    console.log("Execução do bloco try/catch finalizada.");
   }
 
   let admissionDate = result?.result?.contract?.preAdmission?.admissionDate;
@@ -187,7 +180,6 @@ exports.handler = async (event) => {
         }]
     }`;
   json = JSON.parse(json);
-  console.log(json);
   let retorno;
 
   try {
@@ -195,9 +187,7 @@ exports.handler = async (event) => {
   } catch (erro) {
     console.error("Erro ao processar API preAdmissionUpdate:", erro.response.statusText);
     return sendRes(erro.response.status, "Erro ao processar API preAdmissionUpdate:" + erro.response.statusText);
-  } finally {
-    console.log("Execução do bloco try/catch finalizada.");
-  }
+  } 
 
   return sendRes(200, { result: true });
 };

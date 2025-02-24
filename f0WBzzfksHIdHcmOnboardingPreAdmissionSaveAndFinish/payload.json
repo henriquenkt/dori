@@ -451,6 +451,10 @@
                                         },
                                         {
                                             "field": "formated_cpf"
+                                        },
+                                        {
+                                            "field": "escala",
+                                            "value": 77
                                         }
                                     ]
                                 },
