@@ -63,7 +63,6 @@ exports.handler = async (event) => {
 
   try {
     let escala = input.contract.customFields.find((item) => item.field === "escala")?.value || 0;
-    //let escala = 77;
 
     resultEscala = await PlatformApi.Get(eventInfo, `/hcm/general_register/entities/workshiftSchedule?filter=workshift.code eq ${escala}`);
 
