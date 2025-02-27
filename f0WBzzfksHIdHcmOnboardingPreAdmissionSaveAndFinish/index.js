@@ -73,7 +73,7 @@ exports.handler = async (event) => {
         code: item.workSchedule.code,
       }));
 
-    for (horariosDiarios of orderedCodes) {
+    for (let horariosDiarios of orderedCodes) {
       let horario = horariosDiarios.code;
       let sequencia = horariosDiarios.registerSequence;
       let marcacaoHorario = [];
