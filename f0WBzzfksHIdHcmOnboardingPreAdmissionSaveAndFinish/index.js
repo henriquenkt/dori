@@ -54,6 +54,7 @@ exports.handler = async (event) => {
 
   let json = `{"preAdmissionId": "${preAdmissionId}"}`;
   json = JSON.parse(json);
+  let result;
   let resultEscala;
   let resultHorario;
   let texto = '';
