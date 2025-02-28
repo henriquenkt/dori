@@ -57,7 +57,7 @@ exports.handler = async (event) => {
   let result;
   let resultEscala;
   let resultHorario;
-  let texto = '';
+  let escala_contrato1 = '';
 
 
   // Escala
@@ -93,14 +93,14 @@ exports.handler = async (event) => {
         intervalo = moment.utc((resultHorario.contents[2].clockingEventTime - resultHorario.contents[1].clockingEventTime) * 60000).format("HH:mm");
       }
       
-      texto += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      texto += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      texto += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      texto += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      texto += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      texto += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}\n` : '';
-      texto += horario === 9998 && sequencia === 6 && !entrada ? 'Sábado: Compensado\n' : ``;
-      texto += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA\n` : '';
+      escala_contrato1 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
+      escala_contrato1 += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
+      escala_contrato1 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
+      escala_contrato1 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
+      escala_contrato1 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
+      escala_contrato1 += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}\n` : '';
+      escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? 'Sábado: Compensado\n' : ``;
+      escala_contrato1 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA\n` : '';
     }
 
   } catch (erro) {
@@ -176,7 +176,11 @@ exports.handler = async (event) => {
         },
         {
             "field": "vencimentoContrato",
-            "value": "${vencimentoContrato}"
+            "value": "${vencimentoContrato}",
+        },        
+        {
+            "field": "escala_contrato1",
+            "value": "${escala_contrato1}",
         }]
     }`;
   json = JSON.parse(json);
