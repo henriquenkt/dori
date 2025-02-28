@@ -15,12 +15,10 @@ exports.handler = async (event) => {
   const eventInfo = lambdaEvent.createEventInfo(event);
   eventInfo.platformToken = "3sIECz896usgpIost4wevIaBxtcCKi1i";
 
-
   // Formata o CPF
 
   let preAdmissionId = input.id;
   let cpfNumber = input.document.cpf.number.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
-
 
   // Salário por extenso
 
@@ -31,7 +29,6 @@ exports.handler = async (event) => {
     currency: "BRL",
   }).format(salario)} (${salarioExtenso})`;
 
-
   // Refeitorio
 
   let refeitorio = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "refeitorio")?.value || "Não";
@@ -39,7 +36,6 @@ exports.handler = async (event) => {
     refeitorio === "Sim"
       ? `Pretende utilizar o benefício do Programa de Alimentação do Trabalhador, mantido no refeitório da DORI ALIMENTOS S.A., autorizando-a, expressamente, a proceder o desconto dos respectivos valores em folha de pagamento, nos limites do artigo 4º. da portaria do TEM número 3 de 01 de Março de 2002, do percentual de 20% sobre o valor da refeição.`
       : "Não pretende utilizar o aludido benefício, oferecido e mantido DORI ALIMENTOS S.A.";
-
 
   // Contribuição sindical
 
@@ -49,7 +45,6 @@ exports.handler = async (event) => {
       ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao Sindicato dos Trabalhadores nas Indústrias da Alimentação e Afins de Marília (STIAM).`
       : "Não autorizo desconto de qualquer valor a título de contribuição sindical.";
 
-
   // Vencimento do contrato
 
   let json = `{"preAdmissionId": "${preAdmissionId}"}`;
@@ -57,8 +52,7 @@ exports.handler = async (event) => {
   let result;
   let resultEscala;
   let resultHorario;
-  let escala_contrato1 = '';
-
+  let escala_contrato1 = "";
 
   // Escala
 
@@ -87,26 +81,25 @@ exports.handler = async (event) => {
       for (let i = 0; i < resultHorario.contents.length; i++) {
         marcacaoHorario[i] = moment.utc(resultHorario.contents[i].clockingEventTime * 60000).format("HH:mm");
       }
-      if(resultHorario.contents.length === 4){
+      if (resultHorario.contents.length === 4) {
         entrada = moment.utc(resultHorario.contents[0].clockingEventTime * 60000).format("HH:mm");
         saida = moment.utc(resultHorario.contents[3].clockingEventTime * 60000).format("HH:mm");
         intervalo = moment.utc((resultHorario.contents[2].clockingEventTime - resultHorario.contents[1].clockingEventTime) * 60000).format("HH:mm");
       }
-      
-      escala_contrato1 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      escala_contrato1 += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      escala_contrato1 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      escala_contrato1 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      escala_contrato1 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo\n` : '';
-      escala_contrato1 += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}\n` : '';
-      escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? 'Sábado: Compensado\n' : ``;
-      escala_contrato1 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA\n` : '';
-    }
 
+      escala_contrato1 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
+      escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: Compensado<br/>" : ``;
+      escala_contrato1 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA` : "";
+    }
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
     return sendRes(erro.response.status, "Erro ao processar API clockingEventOfWorkSchedule:" + erro.response.statusText);
-  } 
+  }
 
   // Carrega dados da pré-admissão
   try {
@@ -121,7 +114,6 @@ exports.handler = async (event) => {
   if (admissionDate) {
     vencimentoContrato = moment(admissionDate).add(45, "days").format("YYYY-MM-DD");
   }
-
 
   // Atuzaliza os dados da pré-admissão
 
@@ -176,11 +168,11 @@ exports.handler = async (event) => {
         },
         {
             "field": "vencimentoContrato",
-            "value": "${vencimentoContrato}",
-        },        
+            "value": "${vencimentoContrato}"
+        },   
         {
             "field": "escala_contrato1",
-            "value": "${escala_contrato1}",
+            "value": "${escala_contrato1}"
         }]
     }`;
   json = JSON.parse(json);
@@ -191,11 +183,10 @@ exports.handler = async (event) => {
   } catch (erro) {
     console.error("Erro ao processar API preAdmissionUpdate:", erro.response.statusText);
     return sendRes(erro.response.status, "Erro ao processar API preAdmissionUpdate:" + erro.response.statusText);
-  } 
+  }
 
   return sendRes(200, { result: true });
 };
-
 
 // Retorna
 const sendRes = (status, body) => {
