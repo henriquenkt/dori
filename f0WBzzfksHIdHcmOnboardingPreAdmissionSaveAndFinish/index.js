@@ -54,7 +54,6 @@ exports.handler = async (event) => {
   let resultHorario;
   let escala_contrato1 = "";
   let escala_contrato4 = "";
-  let escala_contrato13 = "";
 
   // Escala
 
@@ -84,9 +83,29 @@ exports.handler = async (event) => {
         marcacaoHorario[i] = moment.utc(resultHorario.contents[i].clockingEventTime * 60000).format("HH:mm");
       }
       if (resultHorario.contents.length === 4) {
-        entrada = moment.utc(resultHorario.contents[0].clockingEventTime * 60000).format("HH:mm");
-        saida = moment.utc(resultHorario.contents[3].clockingEventTime * 60000).format("HH:mm");
-        intervalo = moment.utc((resultHorario.contents[2].clockingEventTime - resultHorario.contents[1].clockingEventTime) * 60000).format("HH:mm");
+        const entradaObj = resultHorario.contents.find(item => item.clockingEventSequence === 1);
+        const saidaObj   = resultHorario.contents.find(item => item.clockingEventSequence === 4);
+      
+        // Caso também queira calcular o intervalo (supondo que os outros eventos sejam, por exemplo, sequência 2 e 4):
+        const intervaloInicioObj = resultHorario.contents.find(item => item.clockingEventSequence === 2);
+        const intervaloFimObj    = resultHorario.contents.find(item => item.clockingEventSequence === 3);
+      
+        entrada = moment.utc(entradaObj.clockingEventTime * 60000).format("HH:mm");
+        saida   = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
+        
+        // Calculando o intervalo (duração do intervalo, se essa for a lógica desejada)
+        intervalo = moment.utc((intervaloFimObj.clockingEventTime - intervaloInicioObj.clockingEventTime) * 60000).format("HH:mm");
+      }
+
+      if (resultHorario.contents.length === 2) {
+        const entradaObj = resultHorario.contents.find(item => item.clockingEventSequence === 1);
+        const saidaObj   = resultHorario.contents.find(item => item.clockingEventSequence === 2);
+      
+        entrada = moment.utc(entradaObj.clockingEventTime * 60000).format("HH:mm");
+        saida   = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
+        
+        // Calculando o intervalo (duração do intervalo, se essa for a lógica desejada)
+        intervalo = moment.utc((0) * 60000).format("HH:mm");
       }
 
       escala_contrato1 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
@@ -94,19 +113,14 @@ exports.handler = async (event) => {
       escala_contrato1 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato1 += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo === '00:00' ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo !== '00:00' ? `Sábado: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: Compensado<br/>" : ``;
-      escala_contrato1 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA` : "";
+      escala_contrato1 += (horario === 9999 || horario === 9996) && sequencia === 6 && !entrada ? "Sábado: FOLGA<br/>" : ``;
+      escala_contrato1 += (horario === 9999 || horario === 9996) && sequencia === 7 ? `Domingo: FOLGA` : "";
 
       escala_contrato4 = horario < 9997 ? `Das ${entrada} às ${saida}, com ${intervalo} de intervalo` : escala_contrato4;
 
-      escala_contrato13 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato13 += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato13 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato13 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato13 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato13 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: FOLGA<br/>" : ``;
-      escala_contrato13 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA` : "";
     }
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
@@ -189,10 +203,6 @@ exports.handler = async (event) => {
         {
             "field": "escala_contrato4",
             "value": "${escala_contrato4}"
-        },   
-        {
-            "field": "escala_contrato13",
-            "value": "${escala_contrato13}"
         }]
     }`;
   json = JSON.parse(json);
