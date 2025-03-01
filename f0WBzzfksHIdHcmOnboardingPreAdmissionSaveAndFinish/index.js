@@ -53,6 +53,8 @@ exports.handler = async (event) => {
   let resultEscala;
   let resultHorario;
   let escala_contrato1 = "";
+  let escala_contrato4 = "";
+  let escala_contrato13 = "";
 
   // Escala
 
@@ -95,6 +97,16 @@ exports.handler = async (event) => {
       escala_contrato1 += horario === 9998 && sequencia === 6 && entrada ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
       escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: Compensado<br/>" : ``;
       escala_contrato1 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA` : "";
+
+      escala_contrato4 = horario < 9997 ? `Das ${entrada} às ${saida}, com ${intervalo} de intervalo` : escala_contrato4;
+
+      escala_contrato13 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato13 += horario < 9997 && sequencia === 2 ? `Terça-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato13 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato13 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato13 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato13 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: FOLGA<br/>" : ``;
+      escala_contrato13 += horario === 9999 && sequencia === 7 ? `Domingo: FOLGA` : "";
     }
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
@@ -173,6 +185,14 @@ exports.handler = async (event) => {
         {
             "field": "escala_contrato1",
             "value": "${escala_contrato1}"
+        },   
+        {
+            "field": "escala_contrato4",
+            "value": "${escala_contrato4}"
+        },   
+        {
+            "field": "escala_contrato13",
+            "value": "${escala_contrato13}"
         }]
     }`;
   json = JSON.parse(json);
