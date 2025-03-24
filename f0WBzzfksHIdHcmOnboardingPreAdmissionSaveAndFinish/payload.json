@@ -13,28 +13,26 @@
                 "runtime": "nodejs16.x",
                 "payload": {
                     "json": {
-                        "body": {
+                        "body":{
                             "input": {
-                                "id": "f28cca9a-cfd2-4b71-8be8-95cf4b073cba",
-                                "hasDependent": true,
+                                "id": "1596c777-c8c6-4705-ad2a-a2eec4ee17c8",
+                                "hasDependent": false,
                                 "signature": {},
                                 "documentsSent": {},
+                                "customEntityData": {},
                                 "personalData": {
                                     "address": {
-                                        "id": "5dfb2530-49f4-4d90-bf4b-bb2877865281",
-                                        "firstFileId": "01BB800EC57E4339A471743341A434E2/daae.jpg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/01BB800EC57E4339A471743341A434E2/daae.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250207T140258Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250207%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5969d2b729a23b219ba1746c44a0f8b96d6566421af244a40ce5c07867f61583",
-                                        "firstFileUploadDate": "2025-02-07T11:14:59.805Z",
-                                        "country": {
-                                            "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "name": "Brasil",
-                                            "abbreviation": "BR",
-                                            "createdDate": "2024-11-20T19:49:48.887789Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
-                                            "_discriminator": "country",
-                                            "showField": "Brasil - BR"
+                                        "id": "846596e9-6a9a-4d12-be61-eac1be72bc70",
+                                        "city": {
+                                            "id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+                                            "name": "Marília",
+                                            "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+                                            "createdDate": "2024-11-20T19:49:49.126144Z",
+                                            "lastModifiedDate": "2024-11-20T19:49:49.126144Z",
+                                            "_discriminator": "city",
+                                            "showField": "Marília"
                                         },
-                                        "cep": "13506565",
+                                        "cep": "17512043",
                                         "state": {
                                             "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
                                             "name": "São Paulo",
@@ -45,36 +43,39 @@
                                             "_discriminator": "state",
                                             "showField": "São Paulo - SP"
                                         },
-                                        "city": {
-                                            "id": "0a76ab89-7082-4b54-b35a-540e06a2839c",
-                                            "name": "Rio Claro",
-                                            "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                            "createdDate": "2024-11-20T19:49:49.126144Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:49.126144Z",
-                                            "_discriminator": "city",
-                                            "showField": "Rio Claro"
-                                        },
-                                        "neighborhood": "Vila Alemã",
+                                        "neighborhood": "Distrito Industrial",
                                         "addressType": {
                                             "key": "STREET",
                                             "value": "38 - Rua"
                                         },
-                                        "address": "Rua 6 A Particular",
-                                        "number": "55",
-                                        "additional": ""
+                                        "address": "Rua Benedito Alves Delfino",
+                                        "firstFileId": "6E1A5EB657B0431BAB94C8B54F5347C7/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/6E1A5EB657B0431BAB94C8B54F5347C7/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=37cec77b7cb4c09120e15f99002820f6526b5ca3ded385184fce0802a21bae7f",
+                                        "firstFileUploadDate": "2025-03-13T11:43:10.275Z",
+                                        "country": {
+                                            "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+                                            "name": "Brasil",
+                                            "abbreviation": "BR",
+                                            "createdDate": "2024-11-20T19:49:48.887789Z",
+                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
+                                            "_discriminator": "country",
+                                            "showField": "Brasil - BR"
+                                        },
+                                        "number": "345"
                                     },
                                     "basic": {
-                                        "id": "03f18292-3744-4a8a-b4ab-086e934cfded",
-                                        "badgeFilePermanentUrl": "",
-                                        "employeeFullName": "Teste 1",
-                                        "preferredName": "SR",
+                                        "id": "de2028cb-387a-4aff-b2c4-30ffbd32515e",
+                                        "badgeFileId": "B68697BB7FFB496B81C6125A49EFB0FD/whatsapp.jpeg",
+                                        "badgeFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B68697BB7FFB496B81C6125A49EFB0FD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d398cf2291b30f84338447ca26d020899c85e4d4caef5dc118b3bbd80cbf95a0",
+                                        "badgeFileUploadDate": "2025-03-13T11:46:38.684Z",
+                                        "employeeFullName": "JOSE LUIZ CARLOSJUNIOR",
                                         "gender": {
                                             "key": "MALE",
                                             "value": "Masculino"
                                         }
                                     },
                                     "birthPlace": {
-                                        "id": "d873b7c3-ba3d-4f0c-a908-0d6a2fd2903f",
+                                        "id": "16b2d983-b04a-41f2-b95c-7cfe33f50bc7",
                                         "country": {
                                             "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
                                             "name": "Brasil",
@@ -95,23 +96,23 @@
                                             "showField": "São Paulo - SP"
                                         },
                                         "city": {
-                                            "id": "caf5e8a0-e3ea-479d-8146-62029124f6dd",
-                                            "name": "São Paulo",
+                                            "id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+                                            "name": "Marília",
                                             "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
                                             "createdDate": "2024-11-20T19:49:49.126144Z",
                                             "lastModifiedDate": "2024-11-20T19:49:49.126144Z",
                                             "_discriminator": "city",
-                                            "showField": "São Paulo"
+                                            "showField": "Marília"
                                         },
                                         "customFieldsPersonalBirthPlace": [
                                             {
                                                 "field": "dataNascimento",
-                                                "value": "1976-02-15"
+                                                "value": "1993-05-31"
                                             }
                                         ]
                                     },
                                     "complementary": {
-                                        "id": "e75d627b-33d9-43e7-ac73-daba4fb1c115",
+                                        "id": "8ad17d45-1b42-4430-8730-194209ee2675",
                                         "ethnicity": {
                                             "id": "9aecd6ed-9910-41ac-96e7-c430ea6c466d",
                                             "code": 1,
@@ -121,59 +122,49 @@
                                             "_discriminator": "ethnicity",
                                             "showField": "Branca"
                                         },
-                                        "socialName": "",
-                                        "degreeOfEducationFileId": "CC2026C8F8AC4428A1070636648BC37D/cnh.pdf",
-                                        "degreeOfEducationFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/CC2026C8F8AC4428A1070636648BC37D/cnh.pdf%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250207T140258Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250207%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=17cc37ea47be54b5044252971efba5e6755483a9c19d4f7a28970184a43f75a1",
-                                        "degreeOfEducationFileUploadDate": "2025-02-07T11:15:43.454Z",
+                                        "degreeOfEducationFileId": "878D321C73874E2290D136B4AC80FC9C/whatsapp.jpeg",
+                                        "degreeOfEducationFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/878D321C73874E2290D136B4AC80FC9C/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b09c7a8581ecc11cf3a1613e8330a2fe94dd6e899baeec73fcb7b1f2eb261728",
+                                        "degreeOfEducationFileUploadDate": "2025-03-13T11:46:38.892Z",
                                         "maritalStatus": {
-                                            "key": "MARRIED",
-                                            "value": "Casado"
+                                            "key": "SINGLE",
+                                            "value": "Solteiro"
                                         },
                                         "degreeOfEducation": {
-                                            "id": "1d0a725f-3873-45f3-9694-f43880054a74",
-                                            "code": 9,
-                                            "name": "Educação Superior completa",
-                                            "type": "HIGHER_COMPLETED",
+                                            "id": "92be8c2f-9a42-404b-84f8-35b3a9889359",
+                                            "code": 8,
+                                            "name": "Educação Superior incompleta",
+                                            "type": "HIGHER_INCOMPLETE",
                                             "createdDate": "2024-11-20T19:49:48.017703Z",
                                             "lastModifiedDate": "2024-11-20T19:49:48.017703Z",
                                             "_discriminator": "degreeOfEducation",
-                                            "showField": "Educação Superior completa"
+                                            "showField": "Educação Superior incompleta"
                                         },
                                         "nationality": {
-                                            "id": "b7f807d1-ec1b-46b1-956f-09b2d1231b13",
-                                            "code": 110,
-                                            "name": "Brasileira",
+                                            "id": "02b14911-7bf8-42d4-98bb-89ced60bf1ce",
+                                            "code": 10,
+                                            "name": "Brasileiro",
                                             "type": "BRAZILIAN",
                                             "createdDate": "2024-11-20T19:49:48.830365Z",
                                             "lastModifiedDate": "2024-11-20T19:49:48.830365Z",
                                             "_discriminator": "nationality",
-                                            "showField": "Brasileira"
-                                        },
-                                        "religion": {
-                                            "id": "24323243-54af-413f-bee3-7c6dd05ad97d",
-                                            "code": 1,
-                                            "name": "Católico",
-                                            "createdDate": "2024-11-20T19:49:48.830365Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.830365Z",
-                                            "_discriminator": "religion",
-                                            "showField": "Católico"
+                                            "showField": "Brasileiro"
                                         }
                                     },
                                     "email": {
-                                        "id": "a7fb1d24-7519-4159-8a96-187dce1e2365",
+                                        "id": "b4e5ef9a-7640-4ea2-8445-2a49b3bf25c2",
                                         "firstType": {
                                             "key": "PERSONAL_EMAIL",
                                             "value": "E-mail pessoal"
                                         },
-                                        "firstEmail": "henriquenkt@gmail.com"
+                                        "firstEmail": "julia.braga@dori.com.br"
                                     },
                                     "telephone": {
-                                        "id": "d3ecb6e3-8351-4990-b119-f9acca6635ee",
+                                        "id": "83cbb4bf-183f-497e-be93-f517845ff109",
                                         "firstType": {
                                             "key": "CELLPHONE",
                                             "value": "Celular"
                                         },
-                                        "firstPhone": "5513997917006",
+                                        "firstPhone": "5514996233825",
                                         "firstPhoneCountryId": "br"
                                     },
                                     "disability": {
@@ -181,34 +172,51 @@
                                     }
                                 },
                                 "document": {
-                                    "hiringMedicalExam": {},
+                                    "hiringMedicalExam": {
+                                        "id": "8c6eae44-ceb0-4c69-bdce-84c067d2c1e5",
+                                        "fileId": "C6726505AF8C435285BB453CEF5C02D4/whatsapp.jpeg",
+                                        "filePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/C6726505AF8C435285BB453CEF5C02D4/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7cff5671022d05a095d9fc35bb3a233ac92e52af2ab1121f844d4f93004f06a7",
+                                        "fileUploadDate": "2025-03-13T11:47:52.217Z"
+                                    },
                                     "bankAccount": {},
-                                    "civilCertificate": {},
+                                    "civilCertificate": {
+                                        "id": "f17c352c-b35b-432a-a522-3b6780864af2",
+                                        "registry": "",
+                                        "firstFileId": "F7BE17B950E949E6832E008D46E0D47F/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/F7BE17B950E949E6832E008D46E0D47F/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c35d00a5953410ec30843744134ee059d518be7754ad2e62d64decfbba52d169",
+                                        "secondFileId": "A82E58813E094473BE5D53A065AC1363/whatsapp.jpeg",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/A82E58813E094473BE5D53A065AC1363/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=487f9b075be2b63e22b300a4035024349ed9c93af57bde0dee15166715b647ff",
+                                        "type": {
+                                            "key": "BIRTH_CERTIFICATE",
+                                            "value": "Certidão de nascimento"
+                                        },
+                                        "issueDate": "1993-05-31"
+                                    },
                                     "cnh": {},
-                                    "cns": {},
+                                    "cns": {
+                                        "id": "aa53abb3-43aa-494c-affe-1f23b34dfe89",
+                                        "firstFileId": "B8134924F62D464F9B8A55361A0453A1/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B8134924F62D464F9B8A55361A0453A1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0a497d05d0fbb554ee7df2ebeb518e1c03f3a02179998f031fc4572caa3a974b",
+                                        "firstFileUploadDate": "2025-03-13T11:47:22.74Z",
+                                        "number": "234567890234"
+                                    },
                                     "cpf": {
-                                        "id": "e9f18cce-3932-4849-b0ce-e7bd36ecb2b4",
-                                        "firstFilePermanentUrl": "",
-                                        "number": "15411342813"
+                                        "id": "bffc9243-55f3-4628-ae43-75bc82068abf",
+                                        "firstFileId": "607CD0CC976246EDAABF8A69FB1EB7AE/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/607CD0CC976246EDAABF8A69FB1EB7AE/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=abfd4ce084986a2b70bdeb17fbe151ee41a744798870978232b387c67f7472a0",
+                                        "firstFileUploadDate": "2025-03-13T11:43:59.652Z",
+                                        "number": "14249768040"
                                     },
-                                    "ctps": {},
-                                    "dnv": {},
-                                    "passport": {},
-                                    "pis": {},
-                                    "professionalRecord": {},
-                                    "reservist": {
-                                        "id": "44fcadec-6c0b-4444-9661-626e9359fbe3",
-                                        "firstFilePermanentUrl": "",
-                                        "secondFilePermanentUrl": "",
-                                        "doesntHave": false
-                                    },
-                                    "rg": {
-                                        "id": "7a4e5da4-6ff6-4cca-9d0e-a281292058fe",
-                                        "firstFilePermanentUrl": "",
-                                        "secondFilePermanentUrl": "",
-                                        "number": "233958642",
-                                        "issuer": "ssp",
-                                        "birthDate": "1976-02-15",
+                                    "ctps": {
+                                        "id": "7a5a848a-256e-412d-9d02-83e8f9adb7f1",
+                                        "firstFileId": "3870DD31AF9647DC8AD0FA00709E506A/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/3870DD31AF9647DC8AD0FA00709E506A/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a23d3a0cc8795721b82e330ed9b035380fcf6bdc205fd76a843dc336c087f4a0",
+                                        "firstFileUploadDate": "2025-03-13T11:44:09.751Z",
+                                        "secondFileId": "34F8CC3D68CA43AD8BECDDAE32F87ABD/whatsapp.jpeg",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/34F8CC3D68CA43AD8BECDDAE32F87ABD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9d36949117f252d710caafd4048c46b46ac91668541770fe832b2af39fc55291",
+                                        "secondFileUploadDate": "2025-03-13T11:44:14.33Z",
+                                        "number": "1424976",
+                                        "serie": "8040",
                                         "issuerState": {
                                             "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
                                             "name": "São Paulo",
@@ -219,184 +227,76 @@
                                             "_discriminator": "state",
                                             "showField": "São Paulo - SP"
                                         },
-                                        "issueDate": "2023-01-31",
-                                        "mothersName": "Yara Bermejo Nakata",
-                                        "fathersName": "Jose Nakata",
+                                        "issueDate": "2022-01-21"
+                                    },
+                                    "dnv": {},
+                                    "passport": {},
+                                    "pis": {},
+                                    "professionalRecord": {},
+                                    "reservist": {
+                                        "id": "236ce1a3-039f-4f0b-8556-a1dc7268b669",
+                                        "firstFilePermanentUrl": "",
+                                        "secondFilePermanentUrl": "",
+                                        "doesntHave": true
+                                    },
+                                    "rg": {
+                                        "id": "daab0ec0-9046-4e60-b75e-91d60dd7c1b7",
+                                        "firstFileId": "E3C15708DE9B41FAAF73CDCA44BDA705/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/E3C15708DE9B41FAAF73CDCA44BDA705/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=fb8ff9ac4012749b0df242ba708c745b7893f855baa73073cf88c557bc8668fb",
+                                        "firstFileUploadDate": "2025-03-13T11:44:56.186Z",
+                                        "secondFileId": "AA99EEE1DCF94CFD987918C8ED3F48E1/whatsapp.jpeg",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/AA99EEE1DCF94CFD987918C8ED3F48E1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e8b922f37e57033cec8e63b0404f863490b49c3ca4108f645af5a6636d775419",
+                                        "secondFileUploadDate": "2025-03-13T11:45:00.03Z",
+                                        "number": "31456842",
+                                        "issuer": "ssp",
+                                        "issuerState": {
+                                            "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+                                            "name": "São Paulo",
+                                            "abbreviation": "SP",
+                                            "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+                                            "createdDate": "2024-11-20T19:49:48.887789Z",
+                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
+                                            "_discriminator": "state",
+                                            "showField": "São Paulo - SP"
+                                        },
+                                        "birthDate": "1993-05-31",
+                                        "mothersName": "LURDES DE FATIMA",
+                                        "fathersName": "",
                                         "doesntHave": false
                                     },
                                     "ric": {},
                                     "rne": {},
-                                    "receiveSalaryAdvance": {
-                                        "key": "NO",
-                                        "value": "Não"
+                                    "voter": {
+                                        "id": "e61ac109-a556-40e3-908b-ead7827acd24",
+                                        "firstFileId": "44A09DED8C214157B0C3905C3A9F531B/whatsapp.jpeg",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/44A09DED8C214157B0C3905C3A9F531B/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=05421ded9b968a11a91438957cfcf10521b016d87605987a32e193a7129c2d90",
+                                        "firstFileUploadDate": "2025-03-13T11:46:01.77Z",
+                                        "secondFileId": "0569C67EF50747E0AF5891078C1BC270/whatsapp.jpeg",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/0569C67EF50747E0AF5891078C1BC270/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=673156a62278e87f4c23f68d50fc61995e0cedb6067b799aed5a695f1729b59f",
+                                        "secondFileUploadDate": "2025-03-13T11:46:39.247Z",
+                                        "number": "2458645",
+                                        "votingDistrict": "987",
+                                        "votingSection": "0987",
+                                        "issuerState": {
+                                            "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+                                            "name": "São Paulo",
+                                            "abbreviation": "SP",
+                                            "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+                                            "createdDate": "2024-11-20T19:49:48.887789Z",
+                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
+                                            "_discriminator": "state",
+                                            "showField": "São Paulo - SP"
+                                        }
                                     },
-                                    "voter": {},
                                     "isForeign": {
                                         "key": "NO",
                                         "value": "NO"
-                                    }
-                                },
-                                "customEntityData": {
-                                    "customEntityTwo": {},
-                                    "customEntityThree": {},
-                                    "customEntityOne": {
-                                        "id": "7d4bc934-2c44-4481-a98d-d2778bc5875b",
-                                        "customFields": [
-                                            {
-                                                "field": "valeTransporte",
-                                                "value": "Sim"
-                                            },
-                                            {
-                                                "field": "qtdValeTransporte",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "field": "refeitorio",
-                                                "value": "Sim"
-                                            },
-                                            {
-                                                "field": "sindicato",
-                                                "value": "Sim"
-                                            }
-                                        ]
                                     }
                                 },
                                 "contract": {
                                     "employeeContractType": {
                                         "key": "EMPLOYEE",
                                         "value": "1 - Empregado"
-                                    },
-                                    "company": {
-                                        "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                        "companyName": "Dori",
-                                        "code": "1",
-                                        "enabled": "ACTIVE",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:52:53.356Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                        "_discriminator": "company",
-                                        "showField": "1 - Dori"
-                                    },
-                                    "costCenter": {
-                                        "id": "03861bce-f3f8-49ad-a4d4-b5247bca894f",
-                                        "code": "01",
-                                        "name": "Recursos Humanos",
-                                        "enabled": "ACTIVE",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:53:42.658Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:53:42.658Z",
-                                        "_discriminator": "costCenter",
-                                        "showField": "01 - Recursos Humanos"
-                                    },
-                                    "workstationGroup": {
-                                        "id": "87e48807-8cf1-4ba3-a37f-8d12f4dde69f",
-                                        "code": "01",
-                                        "name": "RH",
-                                        "enabled": "ACTIVE",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                            "_discriminator": "company",
-                                            "showField": "1 - Dori"
-                                        },
-                                        "branchOffice": {
-                                            "id": "7ff18b04-2b05-44b0-a003-488f873827ff",
-                                            "company": {
-                                                "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                                "companyName": "Dori",
-                                                "code": "1",
-                                                "enabled": "ACTIVE",
-                                                "createdBy": "senior.nakata@dori-homolog.com.br",
-                                                "createdDate": "2025-01-02T11:52:53.356Z",
-                                                "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                                "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                                "_discriminator": "company"
-                                            },
-                                            "branchOfficeName": "Dori",
-                                            "tradingName": "Dori",
-                                            "enabled": "ACTIVE",
-                                            "code": "1",
-                                            "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:54:40.976Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-01-02T11:54:40.976Z",
-                                            "_discriminator": "branchOffice",
-                                            "showField": "1 - Dori"
-                                        },
-                                        "costCenter": {
-                                            "id": "03861bce-f3f8-49ad-a4d4-b5247bca894f",
-                                            "code": "01",
-                                            "name": "Recursos Humanos",
-                                            "enabled": "ACTIVE",
-                                            "company": {
-                                                "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                                "companyName": "Dori",
-                                                "code": "1",
-                                                "enabled": "ACTIVE",
-                                                "createdBy": "senior.nakata@dori-homolog.com.br",
-                                                "createdDate": "2025-01-02T11:52:53.356Z",
-                                                "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                                "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                                "_discriminator": "company"
-                                            },
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:53:42.658Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-01-02T11:53:42.658Z",
-                                            "_discriminator": "costCenter",
-                                            "showField": "01 - Recursos Humanos"
-                                        },
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:55:08.666Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:55:08.666Z",
-                                        "_discriminator": "workstationGroup",
-                                        "showField": "01 - RH"
-                                    },
-                                    "branchOffice": {
-                                        "id": "7ff18b04-2b05-44b0-a003-488f873827ff",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "branchOfficeName": "Dori",
-                                        "tradingName": "Dori",
-                                        "enabled": "ACTIVE",
-                                        "code": "1",
-                                        "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:54:40.976Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:54:40.976Z",
-                                        "_discriminator": "branchOffice",
-                                        "showField": "1 - Dori"
                                     },
                                     "jobPosition": {
                                         "id": "870d8bc4-24f6-452b-9161-a2f75bd44b35",
@@ -410,51 +310,35 @@
                                         "_discriminator": "jobPosition",
                                         "showField": "70500 - CARGO 70500"
                                     },
-                                    "area": {
-                                        "id": "092de349-4af7-4dc8-bddf-46bdf406f906",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-02-07T10:59:51.271Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "name": "Recursos Humanos",
-                                        "enabled": "ACTIVE",
-                                        "code": "01",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:53:22.911Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:53:22.911Z",
-                                        "_discriminator": "area",
-                                        "showField": "01 - Recursos Humanos"
-                                    },
                                     "customFields": [
                                         {
-                                            "field": "vencimentoContrato"
+                                            "field": "escala",
+                                            "value": "9999"
                                         },
                                         {
-                                            "field": "contribuicaoSindical"
-                                        },
-                                        {
-                                            "field": "refeicao"
+                                            "field": "salario",
+                                            "value": "2600"
                                         },
                                         {
                                             "field": "salarioExtenso"
                                         },
                                         {
-                                            "field": "salario"
-                                        },
-                                        {
                                             "field": "formated_cpf"
                                         },
                                         {
-                                            "field": "escala",
-                                            "value": 130
+                                            "field": "contribuicaoSindical"
+                                        },
+                                        {
+                                            "field": "vencimentoContrato"
+                                        },
+                                        {
+                                            "field": "refeicao"
+                                        },
+                                        {
+                                            "field": "escala_contrato1"
+                                        },
+                                        {
+                                            "field": "escala_contrato4"
                                         }
                                     ]
                                 },

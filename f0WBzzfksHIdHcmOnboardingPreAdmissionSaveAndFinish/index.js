@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   let body = lambdaEvent.parseBody(event);
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
-  eventInfo.platformToken = "3sIECz896usgpIost4wevIaBxtcCKi1i";
+  eventInfo.platformToken = "T2WZ6caBfYndX3ehT4XfTPLa7vY6NgkJ";
 
   // Formata o CPF
 
@@ -31,7 +31,7 @@ exports.handler = async (event) => {
 
   // Refeitorio
 
-  let refeitorio = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "refeitorio")?.value || "Não";
+  let refeitorio = input?.customEntityData?.customEntityOne?.customFields?.find((item) => item.field === "refeitorio")?.value || "Não";
   let refeicao =
     refeitorio === "Sim"
       ? `Pretende utilizar o benefício do Programa de Alimentação do Trabalhador, mantido no refeitório da DORI ALIMENTOS S.A., autorizando-a, expressamente, a proceder o desconto dos respectivos valores em folha de pagamento, nos limites do artigo 4º. da portaria do TEM número 3 de 01 de Março de 2002, do percentual de 20% sobre o valor da refeição.`
@@ -39,7 +39,7 @@ exports.handler = async (event) => {
 
   // Contribuição sindical
 
-  let sindicato = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "sindicato")?.value || "Não";
+  let sindicato = input?.customEntityData?.customEntityOne?.customFields?.find((item) => item.field === "sindicato")?.value || "Não";
   let contribuicaoSindical =
     sindicato === "Sim"
       ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao Sindicato dos Trabalhadores nas Indústrias da Alimentação e Afins de Marília (STIAM).`
