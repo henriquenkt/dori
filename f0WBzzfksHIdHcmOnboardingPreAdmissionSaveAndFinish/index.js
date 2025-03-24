@@ -83,29 +83,29 @@ exports.handler = async (event) => {
         marcacaoHorario[i] = moment.utc(resultHorario.contents[i].clockingEventTime * 60000).format("HH:mm");
       }
       if (resultHorario.contents.length === 4) {
-        const entradaObj = resultHorario.contents.find(item => item.clockingEventSequence === 1);
-        const saidaObj   = resultHorario.contents.find(item => item.clockingEventSequence === 4);
-      
+        const entradaObj = resultHorario.contents.find((item) => item.clockingEventSequence === 1);
+        const saidaObj = resultHorario.contents.find((item) => item.clockingEventSequence === 4);
+
         // Caso também queira calcular o intervalo (supondo que os outros eventos sejam, por exemplo, sequência 2 e 4):
-        const intervaloInicioObj = resultHorario.contents.find(item => item.clockingEventSequence === 2);
-        const intervaloFimObj    = resultHorario.contents.find(item => item.clockingEventSequence === 3);
-      
+        const intervaloInicioObj = resultHorario.contents.find((item) => item.clockingEventSequence === 2);
+        const intervaloFimObj = resultHorario.contents.find((item) => item.clockingEventSequence === 3);
+
         entrada = moment.utc(entradaObj.clockingEventTime * 60000).format("HH:mm");
-        saida   = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
-        
+        saida = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
+
         // Calculando o intervalo (duração do intervalo, se essa for a lógica desejada)
         intervalo = moment.utc((intervaloFimObj.clockingEventTime - intervaloInicioObj.clockingEventTime) * 60000).format("HH:mm");
       }
 
       if (resultHorario.contents.length === 2) {
-        const entradaObj = resultHorario.contents.find(item => item.clockingEventSequence === 1);
-        const saidaObj   = resultHorario.contents.find(item => item.clockingEventSequence === 2);
-      
+        const entradaObj = resultHorario.contents.find((item) => item.clockingEventSequence === 1);
+        const saidaObj = resultHorario.contents.find((item) => item.clockingEventSequence === 2);
+
         entrada = moment.utc(entradaObj.clockingEventTime * 60000).format("HH:mm");
-        saida   = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
-        
+        saida = moment.utc(saidaObj.clockingEventTime * 60000).format("HH:mm");
+
         // Calculando o intervalo (duração do intervalo, se essa for a lógica desejada)
-        intervalo = moment.utc((0) * 60000).format("HH:mm");
+        intervalo = moment.utc(0 * 60000).format("HH:mm");
       }
 
       escala_contrato1 += horario < 9997 && sequencia === 1 ? `Segunda-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
@@ -113,14 +113,13 @@ exports.handler = async (event) => {
       escala_contrato1 += horario < 9997 && sequencia === 3 ? `Quarta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario < 9997 && sequencia === 4 ? `Quinta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario < 9997 && sequencia === 5 ? `Sexta-Feira: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
-      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo === '00:00' ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
-      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo !== '00:00' ? `Sábado: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo === "00:00" ? `Sábado: das ${entrada} às ${saida}<br/>` : "";
+      escala_contrato1 += horario < 9997 && sequencia === 6 && entrada && intervalo !== "00:00" ? `Sábado: das ${entrada} às ${saida}, com ${intervalo} de intervalo<br/>` : "";
       escala_contrato1 += horario === 9998 && sequencia === 6 && !entrada ? "Sábado: Compensado<br/>" : ``;
       escala_contrato1 += (horario === 9999 || horario === 9996) && sequencia === 6 && !entrada ? "Sábado: FOLGA<br/>" : ``;
       escala_contrato1 += (horario === 9999 || horario === 9996) && sequencia === 7 ? `Domingo: FOLGA` : "";
 
       escala_contrato4 = horario < 9997 ? `Das ${entrada} às ${saida}, com ${intervalo} de intervalo` : escala_contrato4;
-
     }
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
@@ -143,69 +142,88 @@ exports.handler = async (event) => {
 
   // Atuzaliza os dados da pré-admissão
 
-  json = `{
-        "preAdmissionId": "${preAdmissionId}",
-        "company": {
-            "id": "${input?.contract?.company?.id}",
-            "companyName": "${input?.contract?.company?.companyName}",
-            "code": "${input?.contract?.company?.code}" 
-            },
-        "branchOffice": {
-            "id": "${input?.contract?.branchOffice?.id}",
-            "branchOfficeName": "${input?.contract?.branchOffice?.branchOfficeName}",
-            "tradingName": "${input?.contract?.branchOffice?.tradingName}",
-            "code": "${input?.contract?.branchOffice?.code}"
-        },
-        "area": {
-            "id": "${input?.contract?.area?.id}",
-            "name": "${input?.contract?.area?.name}",
-            "code": "${input?.contract?.area?.code}"
-        },
-        "jobPosition": {
-            "id": "${input?.contract?.jobPosition?.id}",
-            "name": "${input?.contract?.jobPosition?.name}",
-            "code": "${input?.contract?.jobPosition?.code}"
-        },
-        "costCenter": {
-            "id": "${input?.contract?.costCenter?.id}",
-            "code": "${input?.contract?.costCenter?.code}",
-            "name": "${input?.contract?.costCenter?.name}"
-        },
-        "workstationGroup": {
-            "id": "${input?.contract?.workstationGroup?.id}",
-            "code": "${input?.contract?.workstationGroup?.code}",
-            "name": "${input?.contract?.workstationGroup?.name}"
-        },
+  json = {
+        "preAdmissionId": preAdmissionId,
         "customFields": [{
             "field": "formated_cpf",
-            "value": "${cpfNumber}"
+            "value": cpfNumber
         },
         {
             "field": "salarioExtenso",
-            "value": "${salarioExtenso}"
+            "value": salarioExtenso
         },
         {
             "field": "refeicao",
-            "value": "${refeicao}"
+            "value": refeicao
         },
         {
             "field": "contribuicaoSindical",
-            "value": "${contribuicaoSindical}"
+            "value": contribuicaoSindical
         },
         {
             "field": "vencimentoContrato",
-            "value": "${vencimentoContrato}"
+            "value": vencimentoContrato
         },   
         {
             "field": "escala_contrato1",
-            "value": "${escala_contrato1}"
+            "value": escala_contrato1
         },   
         {
             "field": "escala_contrato4",
-            "value": "${escala_contrato4}"
+            "value": escala_contrato4
         }]
-    }`;
-  json = JSON.parse(json);
+    };
+
+  if (input?.contract?.company?.id) {
+    json.company = {
+      "id": input?.contract?.company?.id,
+      "companyName": input?.contract?.company?.companyName,
+      "code": input?.contract?.company?.code 
+      };
+  }
+
+  if (input?.contract?.branchOffice?.id) {
+    json.branchOffice = {
+      "id": input?.contract?.branchOffice?.id,
+      "branchOfficeName": input?.contract?.branchOffice?.branchOfficeName,
+      "tradingName": input?.contract?.branchOffice?.tradingName,
+      "code": input?.contract?.branchOffice?.code
+      };
+  }
+
+  if(input?.contract?.area?.id) {
+    json.area = {
+      "id": input?.contract?.area?.id,
+      "name": input?.contract?.area?.name,
+      "code": input?.contract?.area?.code
+      };
+  }
+
+  if(input?.contract?.jobPosition?.id) {
+    json.jobPosition = {
+      "id": input?.contract?.jobPosition?.id,
+      "name": input?.contract?.jobPosition?.name,
+      "code": input?.contract?.jobPosition?.code
+      };
+  }
+  
+  if(input?.contract?.costCenter?.id) {
+    json.costCenter = {
+      "id": input?.contract?.costCenter?.id,
+      "code": input?.contract?.costCenter?.code,
+      "name": input?.contract?.costCenter?.name
+      };
+  }
+
+  if(input?.contract?.workstation?.id) {
+    json.workstation = {
+      "id": input?.contract?.workstation?.id,
+      "code": input?.contract?.workstation?.code,
+      "name": input?.contract?.workstation?.name
+      };
+  }
+
+  console.log(json);
   let retorno;
 
   try {
