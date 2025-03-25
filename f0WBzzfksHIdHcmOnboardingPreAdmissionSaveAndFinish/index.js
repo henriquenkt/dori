@@ -20,6 +20,10 @@ exports.handler = async (event) => {
   let preAdmissionId = input.id;
   let cpfNumber = input.document.cpf.number.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 
+  // Vale transporte
+  
+  let vt = input.contract.customFields.find((item) => item.field === "usaVt")?.value === 'Sim' ? "(X) SIM ( ) NÃO:": "( ) SIM (X) NÃO:";
+
   // Salário por extenso
 
   let salario = input.contract.customFields.find((item) => item.field === "salario")?.value || 0;
@@ -171,6 +175,10 @@ exports.handler = async (event) => {
         {
             "field": "escala_contrato4",
             "value": escala_contrato4
+        },   
+        {
+            "field": "valeTransporte",
+            "value": vt
         }]
     };
 
