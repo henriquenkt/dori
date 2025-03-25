@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
   // Vale transporte
   
-  let vt = input.contract.customFields.find((item) => item.field === "usaVt")?.value === 'Sim' ? "(X) SIM ( ) NÃO:": "( ) SIM (X) NÃO:";
+  let vt = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "usaVt")?.value === 'Sim' ? "(X) SIM ( ) NÃO:": "( ) SIM (X) NÃO:";
 
   // Salário por extenso
 

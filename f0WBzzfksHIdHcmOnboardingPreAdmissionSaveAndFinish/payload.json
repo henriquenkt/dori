@@ -19,7 +19,6 @@
                                 "hasDependent": false,
                                 "signature": {},
                                 "documentsSent": {},
-                                "customEntityData": {},
                                 "personalData": {
                                     "address": {
                                         "id": "846596e9-6a9a-4d12-be61-eac1be72bc70",
@@ -50,7 +49,7 @@
                                         },
                                         "address": "Rua Benedito Alves Delfino",
                                         "firstFileId": "6E1A5EB657B0431BAB94C8B54F5347C7/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/6E1A5EB657B0431BAB94C8B54F5347C7/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=37cec77b7cb4c09120e15f99002820f6526b5ca3ded385184fce0802a21bae7f",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/6E1A5EB657B0431BAB94C8B54F5347C7/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=afe3f64b2aeb48648d76f9c146166ad038ef2e8e4719c5691264dfaecfb9aaa5",
                                         "firstFileUploadDate": "2025-03-13T11:43:10.275Z",
                                         "country": {
                                             "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
@@ -66,7 +65,7 @@
                                     "basic": {
                                         "id": "de2028cb-387a-4aff-b2c4-30ffbd32515e",
                                         "badgeFileId": "B68697BB7FFB496B81C6125A49EFB0FD/whatsapp.jpeg",
-                                        "badgeFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B68697BB7FFB496B81C6125A49EFB0FD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d398cf2291b30f84338447ca26d020899c85e4d4caef5dc118b3bbd80cbf95a0",
+                                        "badgeFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B68697BB7FFB496B81C6125A49EFB0FD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3e971c14e529fd284423f33290df913d91d66bbcb4cecfe922114ece347617c5",
                                         "badgeFileUploadDate": "2025-03-13T11:46:38.684Z",
                                         "employeeFullName": "JOSE LUIZ CARLOSJUNIOR",
                                         "gender": {
@@ -123,7 +122,7 @@
                                             "showField": "Branca"
                                         },
                                         "degreeOfEducationFileId": "878D321C73874E2290D136B4AC80FC9C/whatsapp.jpeg",
-                                        "degreeOfEducationFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/878D321C73874E2290D136B4AC80FC9C/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b09c7a8581ecc11cf3a1613e8330a2fe94dd6e899baeec73fcb7b1f2eb261728",
+                                        "degreeOfEducationFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/878D321C73874E2290D136B4AC80FC9C/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=461af66c3f578b89a7f75b953a65fa5bf747edb5233b48070f154821ab8e78e5",
                                         "degreeOfEducationFileUploadDate": "2025-03-13T11:46:38.892Z",
                                         "maritalStatus": {
                                             "key": "SINGLE",
@@ -175,7 +174,7 @@
                                     "hiringMedicalExam": {
                                         "id": "8c6eae44-ceb0-4c69-bdce-84c067d2c1e5",
                                         "fileId": "C6726505AF8C435285BB453CEF5C02D4/whatsapp.jpeg",
-                                        "filePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/C6726505AF8C435285BB453CEF5C02D4/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7cff5671022d05a095d9fc35bb3a233ac92e52af2ab1121f844d4f93004f06a7",
+                                        "filePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/C6726505AF8C435285BB453CEF5C02D4/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e1d1a78434f650dc48e42fc9f450bfd8a07bdedf94ad9e566f35510455895314",
                                         "fileUploadDate": "2025-03-13T11:47:52.217Z"
                                     },
                                     "bankAccount": {},
@@ -183,9 +182,9 @@
                                         "id": "f17c352c-b35b-432a-a522-3b6780864af2",
                                         "registry": "",
                                         "firstFileId": "F7BE17B950E949E6832E008D46E0D47F/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/F7BE17B950E949E6832E008D46E0D47F/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c35d00a5953410ec30843744134ee059d518be7754ad2e62d64decfbba52d169",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/F7BE17B950E949E6832E008D46E0D47F/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=07734821dbf423ee80b215c5e7fa363a6a69ef2617631f4f1af383b9de4f4f6c",
                                         "secondFileId": "A82E58813E094473BE5D53A065AC1363/whatsapp.jpeg",
-                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/A82E58813E094473BE5D53A065AC1363/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=487f9b075be2b63e22b300a4035024349ed9c93af57bde0dee15166715b647ff",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/A82E58813E094473BE5D53A065AC1363/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=32940271950d05278a424eed7cfdc9302f5b3f7985e79091a024548c034fe9a0",
                                         "type": {
                                             "key": "BIRTH_CERTIFICATE",
                                             "value": "Certidão de nascimento"
@@ -196,24 +195,24 @@
                                     "cns": {
                                         "id": "aa53abb3-43aa-494c-affe-1f23b34dfe89",
                                         "firstFileId": "B8134924F62D464F9B8A55361A0453A1/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B8134924F62D464F9B8A55361A0453A1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0a497d05d0fbb554ee7df2ebeb518e1c03f3a02179998f031fc4572caa3a974b",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/B8134924F62D464F9B8A55361A0453A1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c9b21c27b6f3175cad1c4ddc86ced7c0f7e881c6a1a8b66805d7e111ddc3d4f3",
                                         "firstFileUploadDate": "2025-03-13T11:47:22.74Z",
                                         "number": "234567890234"
                                     },
                                     "cpf": {
                                         "id": "bffc9243-55f3-4628-ae43-75bc82068abf",
                                         "firstFileId": "607CD0CC976246EDAABF8A69FB1EB7AE/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/607CD0CC976246EDAABF8A69FB1EB7AE/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=abfd4ce084986a2b70bdeb17fbe151ee41a744798870978232b387c67f7472a0",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/607CD0CC976246EDAABF8A69FB1EB7AE/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ec348ab0576da0c925a197836cba8f76343eca0378b1cceea28a026df222fbb8",
                                         "firstFileUploadDate": "2025-03-13T11:43:59.652Z",
                                         "number": "14249768040"
                                     },
                                     "ctps": {
                                         "id": "7a5a848a-256e-412d-9d02-83e8f9adb7f1",
                                         "firstFileId": "3870DD31AF9647DC8AD0FA00709E506A/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/3870DD31AF9647DC8AD0FA00709E506A/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a23d3a0cc8795721b82e330ed9b035380fcf6bdc205fd76a843dc336c087f4a0",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/3870DD31AF9647DC8AD0FA00709E506A/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b2e475e23c00915475478aae048a2c41f2af9df10d2484147bc2c10f6a5a96aa",
                                         "firstFileUploadDate": "2025-03-13T11:44:09.751Z",
                                         "secondFileId": "34F8CC3D68CA43AD8BECDDAE32F87ABD/whatsapp.jpeg",
-                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/34F8CC3D68CA43AD8BECDDAE32F87ABD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9d36949117f252d710caafd4048c46b46ac91668541770fe832b2af39fc55291",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/34F8CC3D68CA43AD8BECDDAE32F87ABD/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bdda4500973d71e935d074d8efb62579e76953cdec4bc45f88aaf6a57fab0983",
                                         "secondFileUploadDate": "2025-03-13T11:44:14.33Z",
                                         "number": "1424976",
                                         "serie": "8040",
@@ -242,10 +241,10 @@
                                     "rg": {
                                         "id": "daab0ec0-9046-4e60-b75e-91d60dd7c1b7",
                                         "firstFileId": "E3C15708DE9B41FAAF73CDCA44BDA705/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/E3C15708DE9B41FAAF73CDCA44BDA705/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191958Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=fb8ff9ac4012749b0df242ba708c745b7893f855baa73073cf88c557bc8668fb",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/E3C15708DE9B41FAAF73CDCA44BDA705/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f569c334385eeae8e6255c62af8269c59c6f597122af97371ba28d44304dc11f",
                                         "firstFileUploadDate": "2025-03-13T11:44:56.186Z",
                                         "secondFileId": "AA99EEE1DCF94CFD987918C8ED3F48E1/whatsapp.jpeg",
-                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/AA99EEE1DCF94CFD987918C8ED3F48E1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e8b922f37e57033cec8e63b0404f863490b49c3ca4108f645af5a6636d775419",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/AA99EEE1DCF94CFD987918C8ED3F48E1/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=eca7ee35b1b9c64cd91e73ca248010e325a4cdb2e2246a20af6a2e92a2b901b0",
                                         "secondFileUploadDate": "2025-03-13T11:45:00.03Z",
                                         "number": "31456842",
                                         "issuer": "ssp",
@@ -269,10 +268,10 @@
                                     "voter": {
                                         "id": "e61ac109-a556-40e3-908b-ead7827acd24",
                                         "firstFileId": "44A09DED8C214157B0C3905C3A9F531B/whatsapp.jpeg",
-                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/44A09DED8C214157B0C3905C3A9F531B/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=05421ded9b968a11a91438957cfcf10521b016d87605987a32e193a7129c2d90",
+                                        "firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/44A09DED8C214157B0C3905C3A9F531B/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=46ca8a7f080927ceaf7c992564162db95c5ca1927325b14d78e88d5bb74719fa",
                                         "firstFileUploadDate": "2025-03-13T11:46:01.77Z",
                                         "secondFileId": "0569C67EF50747E0AF5891078C1BC270/whatsapp.jpeg",
-                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/0569C67EF50747E0AF5891078C1BC270/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250324T191959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250324%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=673156a62278e87f4c23f68d50fc61995e0cedb6067b799aed5a695f1729b59f",
+                                        "secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/dori-homologcombr/perm/hcm/onboarding/0569C67EF50747E0AF5891078C1BC270/whatsapp.jpeg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250325T213324Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250325%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=aaf280be1d804e971fc208f8415b20bbc572aba1a4a30a30613961f535e89579",
                                         "secondFileUploadDate": "2025-03-13T11:46:39.247Z",
                                         "number": "2458645",
                                         "votingDistrict": "987",
@@ -291,6 +290,23 @@
                                     "isForeign": {
                                         "key": "NO",
                                         "value": "NO"
+                                    }
+                                },
+                                "customEntityData": {
+                                    "customEntityTwo": {},
+                                    "customEntityThree": {},
+                                    "customEntityOne": {
+                                        "id": "69762fe9-5e50-4b9b-b1c0-751c1b995add",
+                                        "customFields": [
+                                            {
+                                                "field": "usaVt",
+                                                "value": "Sim"
+                                            },
+                                            {
+                                                "field": "qtdVt",
+                                                "value": "2"
+                                            }
+                                        ]
                                     }
                                 },
                                 "contract": {
@@ -312,33 +328,43 @@
                                     },
                                     "customFields": [
                                         {
-                                            "field": "escala",
-                                            "value": "9999"
+                                            "field": "valeTransporte"
+                                        },
+                                        {
+                                            "field": "escala_contrato4",
+                                            "value": "Das undefined às undefined, com undefined de intervalo"
+                                        },
+                                        {
+                                            "field": "escala_contrato1",
+                                            "value": "Segunda-Feira: das 07:30 às 17:23, com 01:05 de intervalo<br/>Terça-Feira: das 07:30 às 17:23, com 01:05 de intervalo<br/>Quarta-Feira: das 07:30 às 17:23, com 01:05 de intervalo<br/>Quinta-Feira: das 07:30 às 17:23, com 01:05 de intervalo<br/>Sexta-Feira: das 07:30 às 17:23, com 01:05 de intervalo<br/>Sábado: FOLGA<br/>Domingo: FOLGA"
+                                        },
+                                        {
+                                            "field": "refeicao",
+                                            "value": "Pretende utilizar o benefício do Programa de Alimentação do Trabalhador, mantido no refeitório da DORI ALIMENTOS S.A., autorizando-a, expressamente, a proceder o desconto dos respectivos valores em folha de pagamento, nos limites do artigo 4º. da portaria do TEM número 3 de 01 de Março de 2002, do percentual de 20% sobre o valor da refeição."
+                                        },
+                                        {
+                                            "field": "vencimentoContrato",
+                                            "value": "2025-05-02"
+                                        },
+                                        {
+                                            "field": "contribuicaoSindical",
+                                            "value": "Não autorizo desconto de qualquer valor a título de contribuição sindical."
+                                        },
+                                        {
+                                            "field": "formated_cpf",
+                                            "value": "142.497.680-40"
+                                        },
+                                        {
+                                            "field": "salarioExtenso",
+                                            "value": "R$ 2.600,00 (dois mil e seiscentos reais)"
                                         },
                                         {
                                             "field": "salario",
                                             "value": "2600"
                                         },
                                         {
-                                            "field": "salarioExtenso"
-                                        },
-                                        {
-                                            "field": "formated_cpf"
-                                        },
-                                        {
-                                            "field": "contribuicaoSindical"
-                                        },
-                                        {
-                                            "field": "vencimentoContrato"
-                                        },
-                                        {
-                                            "field": "refeicao"
-                                        },
-                                        {
-                                            "field": "escala_contrato1"
-                                        },
-                                        {
-                                            "field": "escala_contrato4"
+                                            "field": "escala",
+                                            "value": "9999"
                                         }
                                     ]
                                 },
