@@ -14,15 +14,19 @@ exports.handler = async (event) => {
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
   eventInfo.platformToken = "T2WZ6caBfYndX3ehT4XfTPLa7vY6NgkJ";
+  let preAdmissionId = input.id;
 
   // Formata o CPF
 
-  let preAdmissionId = input.id;
   let cpfNumber = input.document.cpf.number.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 
+  // Formata o CNPJ
+
+  let cnpjNumber = input.document.cpf.number.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5");
+
   // Vale transporte
-  
-  let vt = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "usaVt")?.value === 'Sim' ? "(X) SIM ( ) NÃO:": "( ) SIM (X) NÃO:";
+
+  let vt = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "usaVt")?.value === "Sim" ? "(X) SIM ( ) NÃO:" : "( ) SIM (X) NÃO:";
 
   // Salário por extenso
 
@@ -147,88 +151,94 @@ exports.handler = async (event) => {
   // Atuzaliza os dados da pré-admissão
 
   json = {
-        "preAdmissionId": preAdmissionId,
-        "customFields": [{
-            "field": "formated_cpf",
-            "value": cpfNumber
-        },
-        {
-            "field": "salarioExtenso",
-            "value": salarioExtenso
-        },
-        {
-            "field": "refeicao",
-            "value": refeicao
-        },
-        {
-            "field": "contribuicaoSindical",
-            "value": contribuicaoSindical
-        },
-        {
-            "field": "vencimentoContrato",
-            "value": vencimentoContrato
-        },   
-        {
-            "field": "escala_contrato1",
-            "value": escala_contrato1
-        },   
-        {
-            "field": "escala_contrato4",
-            "value": escala_contrato4
-        },   
-        {
-            "field": "valeTransporte",
-            "value": vt
-        }]
-    };
+    preAdmissionId: preAdmissionId,
+    customFields: [
+      {
+        field: "formated_cpf",
+        value: cpfNumber,
+      },
+      {
+        field: "formated_cnpj",
+        value: cnpjNumber,
+      },
+      {
+        field: "salarioExtenso",
+        value: salarioExtenso,
+      },
+      {
+        field: "refeicao",
+        value: refeicao,
+      },
+      {
+        field: "contribuicaoSindical",
+        value: contribuicaoSindical,
+      },
+      {
+        field: "vencimentoContrato",
+        value: vencimentoContrato,
+      },
+      {
+        field: "escala_contrato1",
+        value: escala_contrato1,
+      },
+      {
+        field: "escala_contrato4",
+        value: escala_contrato4,
+      },
+      {
+        field: "valeTransporte",
+        value: vt,
+      },
+    ],
+  };
 
   if (input?.contract?.company?.id) {
     json.company = {
-      "id": input?.contract?.company?.id,
-      "companyName": input?.contract?.company?.companyName,
-      "code": input?.contract?.company?.code 
-      };
+      id: input?.contract?.company?.id,
+      companyName: input?.contract?.company?.companyName,
+      code: input?.contract?.company?.code,
+    };
   }
 
   if (input?.contract?.branchOffice?.id) {
     json.branchOffice = {
-      "id": input?.contract?.branchOffice?.id,
-      "branchOfficeName": input?.contract?.branchOffice?.branchOfficeName,
-      "tradingName": input?.contract?.branchOffice?.tradingName,
-      "code": input?.contract?.branchOffice?.code
-      };
+      id: input?.contract?.branchOffice?.id,
+      branchOfficeName: input?.contract?.branchOffice?.branchOfficeName,
+      tradingName: input?.contract?.branchOffice?.tradingName,
+      code: input?.contract?.branchOffice?.code,
+    };
   }
 
-  if(input?.contract?.area?.id) {
+  if (input?.contract?.area?.id) {
     json.area = {
-      "id": input?.contract?.area?.id,
-      "name": input?.contract?.area?.name,
-      "code": input?.contract?.area?.code
-      };
+      id: input?.contract?.area?.id,
+      name: input?.contract?.area?.name,
+      code: input?.contract?.area?.code,
+    };
   }
 
-  if(input?.contract?.jobPosition?.id) {
+  if (input?.contract?.jobPosition?.id) {
     json.jobPosition = {
-      "id": input?.contract?.jobPosition?.id,
-      "name": input?.contract?.jobPosition?.name,
-      "code": input?.contract?.jobPosition?.code
-      };
-  }
-  
-  if(input?.contract?.costCenter?.id) {
-    json.costCenter = {
-      "id": input?.contract?.costCenter?.id,
-      "code": input?.contract?.costCenter?.code,
-      "name": input?.contract?.costCenter?.name
-      };
+      id: input?.contract?.jobPosition?.id,
+      name: input?.contract?.jobPosition?.name,
+      code: input?.contract?.jobPosition?.code,
+    };
   }
 
-  if(input?.contract?.workstation?.id) {
+  if (input?.contract?.costCenter?.id) {
+    json.costCenter = {
+      id: input?.contract?.costCenter?.id,
+      code: input?.contract?.costCenter?.code,
+      name: input?.contract?.costCenter?.name,
+    };
+  }
+
+  if (input?.contract?.workstation?.id) {
     json.workstation = {
-      "id": input?.contract?.workstation?.id,
-      "code": input?.contract?.workstation?.code,
-      "name": input?.contract?.workstation?.name
-      };
+      id: input?.contract?.workstation?.id,
+      code: input?.contract?.workstation?.code,
+      name: input?.contract?.workstation?.name,
+    };
   }
 
   console.log(json);
