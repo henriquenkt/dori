@@ -24,6 +24,19 @@ exports.handler = async (event) => {
 
   let cnpjNumber = input?.contract?.branchOffice?.cnpj.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5") || 'Filial não preenchida';
 
+  // Formata o UF Filial
+
+  let state = input?.contract?.branchOffice?.state;
+  let ufFilial = ''
+  try {
+    let resultFilial = await PlatformApi.Get(eventInfo, `/hcm/onboarding/queries/stateListQuery?filter=id eq '${state}'`);
+    ufFilial = resultFilial.contents[0].abbreviation;
+  }
+  catch (erro) {
+    return sendRes(erro.response.status, "Erro ao processar API stateListQuery:" + erro.response.statusText);
+   }
+  
+
   // Vale transporte
 
   let vt = input.customEntityData.customEntityOne.customFields.find((item) => item.field === "usaVt")?.value === "Sim" ? "(X) SIM ( ) NÃO:" : "( ) SIM (X) NÃO:";
@@ -160,6 +173,10 @@ exports.handler = async (event) => {
       {
         field: "formated_cnpj",
         value: cnpjNumber,
+      },
+      {
+        field: "uf_filial",
+        value: ufFilial,
       },
       {
         field: "salarioExtenso",
