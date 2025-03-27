@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
   // Formata o CNPJ
 
-  let cnpjNumber = input.document.cpf.number.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5");
+  let cnpjNumber = input.contract.branchOffice.cnpj.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5");
 
   // Vale transporte
 
