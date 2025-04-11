@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   let body = lambdaEvent.parseBody(event);
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
-  eventInfo.platformToken = "T2WZ6caBfYndX3ehT4XfTPLa7vY6NgkJ";
+  eventInfo.platformToken = "7LbvbMaisfqGv8yC6SzQuIdK6G2xda8B";
   let preAdmissionId = input.id;
 
   // Formata o CPF
@@ -22,20 +22,25 @@ exports.handler = async (event) => {
 
   // Formata o CNPJ
 
-  let cnpjNumber = input?.contract?.branchOffice?.cnpj.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5") || 'Filial não preenchida';
+  let cnpjNumber = "";
+  try {
+    cnpjNumber = input?.contract?.branchOffice?.cnpj
+    cnpjNumber = cnpjNumber ? cnpjNumber.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5"): ``
+  } catch (erro) {
+    return sendRes(erro.response.status, "CNPJ não cadstrado:" + erro.response.statusText);
+  }
+
 
   // Formata o UF Filial
 
   let state = input?.contract?.branchOffice?.state;
-  let ufFilial = ''
+  let ufFilial = "";
   try {
     let resultFilial = await PlatformApi.Get(eventInfo, `/hcm/onboarding/queries/stateListQuery?filter=id eq '${state}'`);
     ufFilial = resultFilial.contents[0].abbreviation;
-  }
-  catch (erro) {
+  } catch (erro) {
     return sendRes(erro.response.status, "Erro ao processar API stateListQuery:" + erro.response.statusText);
-   }
-  
+  }
 
   // Vale transporte
 
