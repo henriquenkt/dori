@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   let body = lambdaEvent.parseBody(event);
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
-  eventInfo.platformToken = "7LbvbMaisfqGv8yC6SzQuIdK6G2xda8B";
+  eventInfo.platformToken = "pnRw8Ls1ZDMOn1CfW6tiup0UpbERKoeq";
   let preAdmissionId = input.id;
 
   // Formata o CPF
@@ -24,12 +24,11 @@ exports.handler = async (event) => {
 
   let cnpjNumber = "";
   try {
-    cnpjNumber = input?.contract?.branchOffice?.cnpj
-    cnpjNumber = cnpjNumber ? cnpjNumber.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5"): ``
+    cnpjNumber = input?.contract?.branchOffice?.cnpj;
+    cnpjNumber = cnpjNumber ? cnpjNumber.replace(/\D/g, "").replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5") : ``;
   } catch (erro) {
     return sendRes(erro.response.status, "CNPJ não cadstrado:" + erro.response.statusText);
   }
-
 
   // Formata o UF Filial
 
@@ -66,9 +65,30 @@ exports.handler = async (event) => {
   // Contribuição sindical
 
   let sindicato = input?.customEntityData?.customEntityOne?.customFields?.find((item) => item.field === "sindicato")?.value || "Não";
+  let codigoSindicato = input?.contract?.customFields.find((item) => item.field === "sindicato")?.value || "Sindicato não cadastrado.";
+  let nomeSindicato = "Sindicato não cadastrado.";
+  try {
+    let customFields = await PlatformApi.Post(eventInfo, `/platform/field_customization/queries/getFieldCustomizationsMetadata`, {
+      serviceId: {
+        domain_: "hcm",
+        service_: "onboarding",
+      },
+      translated: true,
+    });
+    nomeSindicato = customFields.entities_?.find(e => e.id === "inviteModelContract")
+    ?.fields?.find(f => f.id === "sindicato")
+    ?.customization?.customEnumeration?.values
+    ?.find(v => v.key === codigoSindicato)?.value 
+    ?? "Sindicato não cadastrado.";
+  
+  } catch (erro) {
+    console.error("Erro ao processar API getFieldCustomizationsMetadata:", erro.response.statusText);
+    return sendRes(erro.response.status, "Erro ao processar API getFieldCustomizationsMetadata:" + erro.response.statusText);
+  }
+
   let contribuicaoSindical =
     sindicato === "Sim"
-      ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao Sindicato dos Trabalhadores nas Indústrias da Alimentação e Afins de Marília (STIAM).`
+      ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao ${nomeSindicato}.`
       : "Não autorizo desconto de qualquer valor a título de contribuição sindical.";
 
   // Vencimento do contrato
