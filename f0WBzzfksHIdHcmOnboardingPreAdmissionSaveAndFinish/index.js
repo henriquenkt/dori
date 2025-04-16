@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   let body = lambdaEvent.parseBody(event);
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
-  eventInfo.platformToken = "pnRw8Ls1ZDMOn1CfW6tiup0UpbERKoeq";
+  eventInfo.platformToken = "Yd4BBpd9FWvJmRPEuIk4SEKGQDIZ3k77";
   let preAdmissionId = input.id;
 
   // Formata o CPF
@@ -67,6 +67,9 @@ exports.handler = async (event) => {
   let sindicato = input?.customEntityData?.customEntityOne?.customFields?.find((item) => item.field === "sindicato")?.value || "Não";
   let codigoSindicato = input?.contract?.customFields.find((item) => item.field === "sindicato")?.value || "Sindicato não cadastrado.";
   let nomeSindicato = "Sindicato não cadastrado.";
+  let sindicatoPercentual = '';
+  let limiteContribuicao = '';
+  
   try {
     let customFields = await PlatformApi.Post(eventInfo, `/platform/field_customization/queries/getFieldCustomizationsMetadata`, {
       serviceId: {
@@ -80,6 +83,10 @@ exports.handler = async (event) => {
     ?.customization?.customEnumeration?.values
     ?.find(v => v.key === codigoSindicato)?.value 
     ?? "Sindicato não cadastrado.";
+
+    let sindicatoPlatform = await PlatformApi.Get(eventInfo, `/hcm/payroll/entities/syndicate?filter=code eq '${codigoSindicato}'`);
+    sindicatoPercentual = sindicatoPlatform.contents[0].custom.percentualContribuicao || 'Percentual não cadastrado.';
+    limiteContribuicao = sindicatoPlatform.contents[0].custom.limiteContribuicao || 'Contribuição não cadastrada.';
   
   } catch (erro) {
     console.error("Erro ao processar API getFieldCustomizationsMetadata:", erro.response.statusText);
@@ -88,7 +95,7 @@ exports.handler = async (event) => {
 
   let contribuicaoSindical =
     sindicato === "Sim"
-      ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao ${nomeSindicato}.`
+      ? `Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a ${sindicatoPercentual} de meu salário nominal - limitado ao teto de R$ ${limiteContribuicao} - para repasse ao ${nomeSindicato}.`
       : "Não autorizo desconto de qualquer valor a título de contribuição sindical.";
 
   // Vencimento do contrato
