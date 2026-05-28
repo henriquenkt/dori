@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   let body = lambdaEvent.parseBody(event);
   let input = body.input;
   const eventInfo = lambdaEvent.createEventInfo(event);
-  eventInfo.platformToken = "Yd4BBpd9FWvJmRPEuIk4SEKGQDIZ3k77";
+  eventInfo.platformToken = "87kkgYkAEtfQpP0nBKoXZVHur0Y12LTl";
   let preAdmissionId = input.id;
 
   // Formata o CPF
@@ -38,7 +38,7 @@ exports.handler = async (event) => {
     let resultFilial = await PlatformApi.Get(eventInfo, `/hcm/onboarding/queries/stateListQuery?filter=id eq '${state}'`);
     ufFilial = resultFilial.contents[0].abbreviation;
   } catch (erro) {
-    return sendRes(erro.response.status, "Erro ao processar API stateListQuery:" + erro.response.statusText);
+    return sendRes(erro.response.status, "Erro ao processar API stateListQuery:" + erro.response.statusText + " - Verifique se o campo filial está preenchide e o campo estado no cadastro de filiais");
   }
 
   // Vale transporte
@@ -58,7 +58,8 @@ exports.handler = async (event) => {
 
   let refeitorio = input?.customEntityData?.customEntityOne?.customFields?.find((item) => item.field === "refeitorio")?.value || "Não";
   let refeicao =
-    refeitorio === "Sim"
+    
+  refeitorio === "Sim"
       ? `Pretende utilizar o benefício do Programa de Alimentação do Trabalhador, mantido no refeitório da DORI ALIMENTOS S.A., autorizando-a, expressamente, a proceder o desconto dos respectivos valores em folha de pagamento, nos limites do artigo 4º. da portaria do TEM número 3 de 01 de Março de 2002, do percentual de 20% sobre o valor da refeição.`
       : "Não pretende utilizar o aludido benefício, oferecido e mantido DORI ALIMENTOS S.A.";
 
@@ -85,12 +86,12 @@ exports.handler = async (event) => {
     ?? "Sindicato não cadastrado.";
 
     let sindicatoPlatform = await PlatformApi.Get(eventInfo, `/hcm/payroll/entities/syndicate?filter=code eq '${codigoSindicato}'`);
-    sindicatoPercentual = sindicatoPlatform.contents[0].custom.percentualContribuicao || 'Percentual não cadastrado.';
-    limiteContribuicao = sindicatoPlatform.contents[0].custom.limiteContribuicao || 'Contribuição não cadastrada.';
+    sindicatoPercentual = sindicatoPlatform.contents[0].custom.usu_percon  || 'Percentual não cadastrado.';
+    limiteContribuicao = sindicatoPlatform.contents[0].custom.usu_limcon  || 'Contribuição não cadastrada.';
   
   } catch (erro) {
-    console.error("Erro ao processar API getFieldCustomizationsMetadata:", erro.response.statusText);
-    return sendRes(erro.response.status, "Erro ao processar API getFieldCustomizationsMetadata:" + erro.response.statusText);
+    console.error("Erro ao processar API getFieldCustomizationsMetadata:", erro.message);
+    return sendRes("Erro ao processar API getFieldCustomizationsMetadata:" + erro.message + " - Verifique se o campo sindicato esta preenchido.");
   }
 
   let contribuicaoSindical =
@@ -176,7 +177,7 @@ exports.handler = async (event) => {
     }
   } catch (erro) {
     console.error("Erro ao processar API clockingEventOfWorkSchedule:", erro.response.statusText);
-    return sendRes(erro.response.status, "Erro ao processar API clockingEventOfWorkSchedule:" + erro.response.statusText);
+    return sendRes(erro.response.status, "Erro ao processar API clockingEventOfWorkSchedule:" + erro.response.statusText + " - Verifique se o campo escala está preenchido.");
   }
 
   // Carrega dados da pré-admissão
@@ -195,6 +196,7 @@ exports.handler = async (event) => {
 
   // Atuzaliza os dados da pré-admissão
 
+  
   json = {
     preAdmissionId: preAdmissionId,
     customFields: [
@@ -282,11 +284,11 @@ exports.handler = async (event) => {
     };
   }
 
-  if (input?.contract?.workstation?.id) {
-    json.workstation = {
-      id: input?.contract?.workstation?.id,
-      code: input?.contract?.workstation?.code,
-      name: input?.contract?.workstation?.name,
+  if (input?.contract?.workstationGroup ?.id) {
+    json.workstationGroup = { 
+      id: input?.contract?.workstationGroup?.id,
+      code: input?.contract?.workstationGroup?.code,
+      name: input?.contract?.workstationGroup?.name,
     };
   }
 

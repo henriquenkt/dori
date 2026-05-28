@@ -1,547 +1,780 @@
 {
-    "configurations": [
-        {
-            "type": "aws-sam",
-            "request": "direct-invoke",
-            "name": "f0WBzzfksHIdHcmOnboardingPreAdmissionSaveAndFinish:index.handler (nodejs16.x)",
-            "invokeTarget": {
-                "target": "code",
-                "projectRoot": "f0WBzzfksHIdHcmOnboardingPreAdmissionSaveAndFinish",
-                "lambdaHandler": "index.handler"
-            },
-            "lambda": {
-                "runtime": "nodejs16.x",
-                "payload": {
-                    "json": {
-                        "body":{
-                            "input": {
-                                "id": "38a7cd4a-0e32-4379-a4ef-cf21b16d8b5b",
-                                "hasDependent": true,
-                                "signature": {},
-                                "documentsSent": {},
-                                "personalData": {
-                                    "address": {
-                                        "id": "e28b15d5-c57f-48c3-be54-f391d06fc071",
-                                        "validation": {
-                                            "id": "ac6164c5-8dc9-4126-82b6-0754319c1039",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:41.04Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "firstFilePermanentUrl": "",
-                                        "country": {
-                                            "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "name": "Brasil",
-                                            "abbreviation": "BR",
-                                            "createdDate": "2024-11-20T19:49:48.887789Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
-                                            "_discriminator": "country",
-                                            "showField": "Brasil - BR"
-                                        },
-                                        "cep": "13506565",
-                                        "state": {
-                                            "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                            "name": "São Paulo",
-                                            "abbreviation": "SP",
-                                            "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "createdDate": "2024-11-20T19:49:48.887789Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
-                                            "_discriminator": "state",
-                                            "showField": "São Paulo - SP"
-                                        },
-                                        "city": {
-                                            "id": "0a76ab89-7082-4b54-b35a-540e06a2839c",
-                                            "name": "Rio Claro",
-                                            "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                            "createdDate": "2024-11-20T19:49:49.126144Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:49.126144Z",
-                                            "_discriminator": "city",
-                                            "showField": "Rio Claro"
-                                        },
-                                        "neighborhood": "Vila Alemã",
-                                        "addressType": {
-                                            "key": "STREET",
-                                            "value": "38 - Rua"
-                                        },
-                                        "address": "Rua 6 A Particular",
-                                        "number": "55",
-                                        "additional": ""
-                                    },
-                                    "basic": {
-                                        "id": "2d99b6bc-d884-466c-bff6-4c7082eee5d9",
-                                        "validation": {
-                                            "id": "a987a476-93dd-43b7-a636-4e3466e9d0ce",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:40.989Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "badgeFilePermanentUrl": "",
-                                        "employeeFullName": "HENRIQUE NAKATA",
-                                        "preferredName": "HENRIQUE",
-                                        "gender": {
-                                            "key": "MALE",
-                                            "value": "Masculino"
-                                        }
-                                    },
-                                    "birthPlace": {
-                                        "id": "ecbc657d-c1a7-4dde-9674-4e35cc7f3ac7",
-                                        "validation": {
-                                            "id": "c9e99c63-a75f-4aea-ab3c-5cd64b76f792",
-                                            "validated": false,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T21:00:06.334Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "country": {
-                                            "id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "name": "Brasil",
-                                            "abbreviation": "BR",
-                                            "createdDate": "2024-11-20T19:49:48.887789Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
-                                            "_discriminator": "country",
-                                            "showField": "Brasil - BR"
-                                        },
-                                        "state": {
-                                            "id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                            "name": "São Paulo",
-                                            "abbreviation": "SP",
-                                            "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                            "createdDate": "2024-11-20T19:49:48.887789Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.887789Z",
-                                            "_discriminator": "state",
-                                            "showField": "São Paulo - SP"
-                                        },
-                                        "city": {
-                                            "id": "caf5e8a0-e3ea-479d-8146-62029124f6dd",
-                                            "name": "São Paulo",
-                                            "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                            "createdDate": "2024-11-20T19:49:49.126144Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:49.126144Z",
-                                            "_discriminator": "city",
-                                            "showField": "São Paulo"
-                                        },
-                                        "customFieldsPersonalBirthPlace": [
-                                            {
-                                                "field": "dataNascimento",
-                                                "value": "1976-02-15"
-                                            }
-                                        ]
-                                    },
-                                    "complementary": {
-                                        "id": "c0afb978-511c-494f-858a-2befbf403a5a",
-                                        "validation": {
-                                            "id": "4d2ae869-c644-4958-9ddb-72ba55663a5c",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:41.012Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "degreeOfEducationFilePermanentUrl": "",
-                                        "maritalStatus": {
-                                            "key": "MARRIED",
-                                            "value": "Casado"
-                                        },
-                                        "degreeOfEducation": {
-                                            "id": "1d0a725f-3873-45f3-9694-f43880054a74",
-                                            "code": 9,
-                                            "name": "Educação Superior completa",
-                                            "type": "HIGHER_COMPLETED",
-                                            "createdDate": "2024-11-20T19:49:48.017703Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.017703Z",
-                                            "_discriminator": "degreeOfEducation",
-                                            "showField": "Educação Superior completa"
-                                        },
-                                        "nationality": {
-                                            "id": "b7f807d1-ec1b-46b1-956f-09b2d1231b13",
-                                            "code": 110,
-                                            "name": "Brasileira",
-                                            "type": "BRAZILIAN",
-                                            "createdDate": "2024-11-20T19:49:48.830365Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.830365Z",
-                                            "_discriminator": "nationality",
-                                            "showField": "Brasileira"
-                                        },
-                                        "religion": {
-                                            "id": "24323243-54af-413f-bee3-7c6dd05ad97d",
-                                            "code": 1,
-                                            "name": "Católico",
-                                            "createdDate": "2024-11-20T19:49:48.830365Z",
-                                            "lastModifiedDate": "2024-11-20T19:49:48.830365Z",
-                                            "_discriminator": "religion",
-                                            "showField": "Católico"
-                                        },
-                                        "ethnicity": {
-                                            "id": "9aecd6ed-9910-41ac-96e7-c430ea6c466d",
-                                            "code": 1,
-                                            "name": "Branca",
-                                            "eSocialRacialType": "WHITE",
-                                            "enabled": "ACTIVE",
-                                            "_discriminator": "ethnicity",
-                                            "showField": "Branca"
-                                        },
-                                        "socialName": ""
-                                    },
-                                    "email": {
-                                        "id": "b35b7ad5-07ad-45f0-88ba-7aa69ea37274",
-                                        "validation": {
-                                            "id": "478a2f1c-e1ef-4a1e-8eeb-f398501fbca8",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:41.064Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "firstType": {
-                                            "key": "PERSONAL_EMAIL",
-                                            "value": "E-mail pessoal"
-                                        },
-                                        "firstEmail": "henriquenkt@gmail.com"
-                                    },
-                                    "telephone": {
-                                        "id": "1bbfd1dd-8b7b-449d-8669-610ae3630b9b",
-                                        "validation": {
-                                            "id": "ab16169c-3b9f-4d17-8f4c-14ae89e49535",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:41.058Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "firstType": {
-                                            "key": "CELLPHONE",
-                                            "value": "Celular"
-                                        },
-                                        "firstPhone": "5513997917006",
-                                        "firstPhoneCountryId": "br"
-                                    },
-                                    "disability": {
-                                        "hasDisability": false
-                                    }
-                                },
-                                "document": {
-                                    "hiringMedicalExam": {},
-                                    "bankAccount": {},
-                                    "civilCertificate": {},
-                                    "cnh": {},
-                                    "cns": {},
-                                    "cpf": {
-                                        "id": "1bd4195f-5572-46a5-b3de-d0ebff6f33f7",
-                                        "validation": {
-                                            "id": "b49c68d6-737d-447f-bd17-ee726b293e96",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-01-02T20:05:41.092Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        },
-                                        "firstFilePermanentUrl": "",
-                                        "number": "15411342813"
-                                    },
-                                    "ctps": {},
-                                    "dnv": {},
-                                    "passport": {},
-                                    "pis": {},
-                                    "professionalRecord": {},
-                                    "reservist": {
-                                        "id": "db9ba303-2029-4010-ad19-cab8dd4b2be8",
-                                        "firstFilePermanentUrl": "",
-                                        "secondFilePermanentUrl": "",
-                                        "doesntHave": false
-                                    },
-                                    "rg": {
-                                        "id": "f8d25e1c-1182-42a2-835b-391d196df9ba",
-                                        "secondFilePermanentUrl": "",
-                                        "firstFilePermanentUrl": "",
-                                        "doesntHave": false
-                                    },
-                                    "ric": {},
-                                    "rne": {},
-                                    "voter": {},
-                                    "isForeign": {
-                                        "key": "NO",
-                                        "value": "NO"
-                                    }
-                                },
-                                "customEntityData": {
-                                    "customEntityTwo": {},
-                                    "customEntityThree": {},
-                                    "customEntityOne": {
-                                        "id": "ecc3c94c-6991-4e2c-926a-de2e049efb32",
-                                        "customFields": [
-                                            {
-                                                "field": "sindicato",
-                                                "value": "Sim"
-                                            },
-                                            {
-                                                "field": "usaVt",
-                                                "value": "Não"
-                                            },
-                                            {
-                                                "field": "qtdVt"
-                                            }
-                                        ],
-                                        "validation": {
-                                            "id": "3673ac06-c130-490a-a449-44722e22d67a",
-                                            "validated": true,
-                                            "validationUser": "senior.nakata@dori-homolog.com.br",
-                                            "validationDate": "2025-04-15T10:41:50.543Z",
-                                            "validationUserName": "Maria Claudia Rocha"
-                                        }
-                                    }
-                                },
-                                "contract": {
-                                    "employeeContractType": {
-                                        "key": "EMPLOYEE",
-                                        "value": "1 - Empregado"
-                                    },
-                                    "eSocialCategory": {
-                                        "key": "CATEGORY_101",
-                                        "value": "101 - Empregado - Geral, inclusive o empregado público da administração direta ou indireta contratado pela CLT"
-                                    },
-                                    "unemploymentInsuranceType": {
-                                        "key": "NOT_CONSULTED",
-                                        "value": "Não consultado"
-                                    },
-                                    "sefipCategoryType": {
-                                        "key": "TYPE_01",
-                                        "value": "Empregado"
-                                    },
-                                    "employeeType": {
-                                        "key": "EMPLOYEE",
-                                        "value": "1 - Colaborador"
-                                    },
-                                    "raisType": {
-                                        "key": "TYPE_10",
-                                        "value": "10 - CLT Urbano Indet.P.Jurid"
-                                    },
-                                    "company": {
-                                        "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                        "companyName": "Dori",
-                                        "code": "1",
-                                        "enabled": "ACTIVE",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:52:53.356Z",
-                                        "lastModifiedBy": "mcradabo@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-04-11T19:53:35.244Z",
-                                        "_discriminator": "company",
-                                        "showField": "1 - Dori"
-                                    },
-                                    "costCenter": {
-                                        "id": "03861bce-f3f8-49ad-a4d4-b5247bca894f",
-                                        "code": "01",
-                                        "name": "Recursos Humanos",
-                                        "enabled": "ACTIVE",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "mcradabo@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-04-11T19:53:35.244Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:53:42.658Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:53:42.658Z",
-                                        "_discriminator": "costCenter",
-                                        "showField": "01 - Recursos Humanos"
-                                    },
-                                    "branchOffice": {
-                                        "id": "7ff18b04-2b05-44b0-a003-488f873827ff",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "mcradabo@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-04-11T19:53:35.244Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "branchOfficeName": "Dori",
-                                        "tradingName": "Dori",
-                                        "enabled": "ACTIVE",
-                                        "code": "1",
-                                        "country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
-                                        "cep": "",
-                                        "state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
-                                        "city": "5eda7b32-e966-4c6e-bd07-21509c66de79",
-                                        "addressType": "AVENUE",
-                                        "address": "AV REPUBLICA",
-                                        "number": "5159",
-                                        "cnpj": "52123916000132",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:54:40.976Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-04-15T11:35:20.198Z",
-                                        "custom": {
-                                            "nacionalidadeResponsavel": "Brasileira",
-                                            "identidadeResponsavel": "23.344.4444",
-                                            "estadoCivilResponsavel": "Casada",
-                                            "nomeResponsavel": "Cristiane"
-                                        },
-                                        "_discriminator": "branchOffice",
-                                        "showField": "1 - Dori"
-                                    },
-                                    "jobPosition": {
-                                        "id": "870d8bc4-24f6-452b-9161-a2f75bd44b35",
-                                        "name": "CARGO 70500",
-                                        "enabled": "ACTIVE",
-                                        "code": "70500",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2024-12-30T10:33:02.624Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2024-12-30T10:33:02.624Z",
-                                        "_discriminator": "jobPosition",
-                                        "showField": "70500 - CARGO 70500"
-                                    },
-                                    "area": {
-                                        "id": "092de349-4af7-4dc8-bddf-46bdf406f906",
-                                        "company": {
-                                            "id": "eac93f1f-56ec-4ef7-be7b-3b629823de5b",
-                                            "companyName": "Dori",
-                                            "code": "1",
-                                            "enabled": "ACTIVE",
-                                            "createdBy": "senior.nakata@dori-homolog.com.br",
-                                            "createdDate": "2025-01-02T11:52:53.356Z",
-                                            "lastModifiedBy": "mcradabo@dori-homolog.com.br",
-                                            "lastModifiedDate": "2025-04-11T19:53:35.244Z",
-                                            "_discriminator": "company"
-                                        },
-                                        "name": "Recursos Humanos",
-                                        "enabled": "ACTIVE",
-                                        "code": "01",
-                                        "createdBy": "senior.nakata@dori-homolog.com.br",
-                                        "createdDate": "2025-01-02T11:53:22.911Z",
-                                        "lastModifiedBy": "senior.nakata@dori-homolog.com.br",
-                                        "lastModifiedDate": "2025-01-02T11:53:22.911Z",
-                                        "_discriminator": "area",
-                                        "showField": "01 - Recursos Humanos"
-                                    },
-                                    "customFields": [
-                                        {
-                                            "field": "salario",
-                                            "value": "1500"
-                                        },
-                                        {
-                                            "field": "escala",
-                                            "value": "5"
-                                        },
-                                        {
-                                            "field": "sindicato",
-                                            "value": "2"
-                                        },
-                                        {
-                                            "field": "salarioExtenso",
-                                            "value": "R$ 1.500,00 (um mil e quinhentos reais)"
-                                        },
-                                        {
-                                            "field": "refeicao",
-                                            "value": "Não pretende utilizar o aludido benefício, oferecido e mantido DORI ALIMENTOS S.A."
-                                        },
-                                        {
-                                            "field": "formated_cpf",
-                                            "value": "154.113.428-13"
-                                        },
-                                        {
-                                            "field": "escala_contrato4",
-                                            "value": "Das 05:05 às 14:58, com 01:05 de intervalo"
-                                        },
-                                        {
-                                            "field": "vencimentoContrato",
-                                            "value": "2025-03-08"
-                                        },
-                                        {
-                                            "field": "contribuicaoSindical",
-                                            "value": "Autorizo expressamente o desconto, a título de contribuição sindical do valor correspondente a 1,2% (um vírgula dois por cento) de meu salário nominal - limitado ao teto de R$ 49,00 (quarenta e nove reais) - para repasse ao SIND. TRAB. TRANSP. ROD. URB. MARILIA RE ."
-                                        },
-                                        {
-                                            "field": "formated_cnpj",
-                                            "value": "52.123.916/0001-32"
-                                        },
-                                        {
-                                            "field": "valeTransporte",
-                                            "value": "( ) SIM (X) NÃO:"
-                                        },
-                                        {
-                                            "field": "escala_contrato1",
-                                            "value": "Segunda-Feira: das 05:05 às 14:58, com 01:05 de intervalo<br/>Terça-Feira: das 05:05 às 14:58, com 01:05 de intervalo<br/>Quarta-Feira: das 05:05 às 14:58, com 01:05 de intervalo<br/>Quinta-Feira: das 05:05 às 14:58, com 01:05 de intervalo<br/>Sexta-Feira: das 05:05 às 14:58, com 01:05 de intervalo<br/>Sábado: Compensado<br/>Domingo: FOLGA"
-                                        },
-                                        {
-                                            "field": "uf_filial",
-                                            "value": "SP"
-                                        }
-                                    ]
-                                },
-                                "saveAsDraft": true
-                            },
-                            "output": {
-                                "result": true
-                            }
-                        }
-                    }
-                },
-                "environmentVariables": {}
-            }
-        },
-        {
-            "type": "aws-sam",
-            "request": "direct-invoke",
-            "invokeTarget": {
-                "target": "code",
-                "lambdaHandler": "index.handler",
-                "projectRoot": "f0WBzzfksHIdHcmVacationmanagementValidateVacationSchedule"
-            },
-            "lambda": {
-                "runtime": "nodejs14.x",
-                "payload": {
-                    "json": {
-                        "headers": {
-                            "Authorization": "bearer EvXblf42DjzExrEqk9fPxNF4ikv7Ny78"
-                        },
-                        "body": {
-                            "input": {
-                                "vacationSchedules": [
-                                    {
-                                        "employeeId": "735F8768B1D14E13B4B203B9DBA6AD37",
-                                        "vacationPeriodId": "1A7E82F62B6B4C73B2C52A4C9554DAC3",
-                                        "startDate": "2025-01-02",
-                                        "vacationDays": 15,
-                                        "vacationBonusDays": 10,
-                                        "has13thSalaryAdvance": false
-                                    }
-                                ]
-                            },
-                            "output": {
-                                "vacationScheduleMessages": [
-                                    {
-                                        "employeeId": "735F8768B1D14E13B4B203B9DBA6AD37",
-                                        "vacationPeriodId": "1A7E82F62B6B4C73B2C52A4C9554DAC3",
-                                        "startDate": "2025-01-02",
-                                        "validationMessages": [
-                                            {
-                                                "type": "TYPE_1_VACATION_SCHEDULING_IN_ADVANCE",
-                                                "message": "É necessário solicitar as férias com no mínimo 30 dias de antecedência"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                }
-            },
-            "sam": {
-                "containerBuild": false,
-                "skipNewImageCheck": false
-            },
-            "api": {
-                "httpMethod": "get"
-            },
-            "name": "Vacantion Schedule"
-        }
-    ]
+	"configurations": [
+		{
+			"type": "aws-sam",
+			"request": "direct-invoke",
+			"name": "f0WBzzfksHIdHcmOnboardingPreAdmissionSaveAndFinish:index.handler (nodejs16.x)",
+			"invokeTarget": {
+				"target": "code",
+				"projectRoot": "f0WBzzfksHIdHcmOnboardingPreAdmissionSaveAndFinish",
+				"lambdaHandler": "index.handler"
+			},
+			"lambda": {
+				"runtime": "nodejs16.x",
+				"payload": {
+					"json": {
+						"body": {
+	"input": {
+		"id": "983d17d8-fa47-48cf-a155-768e753afbeb",
+		"hasDependent": false,
+		"signature": {},
+		"documentsSent": {},
+		"personalData": {
+			"address": {
+				"id": "f3033275-e495-424a-87e0-d3338307cb86",
+				"validation": {
+					"id": "bde7555d-fe17-4162-aae7-1cc6c4df49ed",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.569Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"cep": "17502480",
+				"city": {
+					"id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+					"name": "Marília",
+					"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"createdDate": "2021-03-15T12:23:06.665021Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.665021Z",
+					"_discriminator": "city",
+					"showField": "MARILIA"
+				},
+				"address": "RUA IPE",
+				"firstFileId": "E3602F49D833460C998DF71DF9A523C1/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/E3602F49D833460C998DF71DF9A523C1/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9fb2c4b75728637e631dde4922e710532dfea85260fbb691fda4b8009a265317",
+				"firstFileUploadDate": "2025-06-12T22:20:39.631Z",
+				"country": {
+					"id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"name": "Brasil",
+					"abbreviation": "BR",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "country",
+					"showField": "BRASIL - BR"
+				},
+				"state": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"neighborhood": "JARDIM MARILIA",
+				"addressType": {
+					"key": "STREET",
+					"value": "38 - RUA"
+				},
+				"number": "07"
+			},
+			"basic": {
+				"id": "23bc552a-ac9f-4d77-89fd-7c40c829761c",
+				"validation": {
+					"id": "a1655228-1743-4961-876a-e2edcc938186",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.505Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"badgeFileId": "BD282A6640C148D7A517B8B0F47B194F/1.jpg",
+				"badgeFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/BD282A6640C148D7A517B8B0F47B194F/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7d458dc59b83a8f3d04c4f7e270074b4c1703a4ee78be9243e659a992034884e",
+				"badgeFileUploadDate": "2025-06-12T22:17:08.046Z",
+				"employeeFullName": "JOSE CARLOS LUIZ",
+				"gender": {
+					"key": "MALE",
+					"value": "MASCULINO"
+				}
+			},
+			"birthPlace": {
+				"id": "780a6dfb-b493-48c6-9c93-d554bccc8a6c",
+				"validation": {
+					"id": "5f13a0e2-8c1c-45f6-99cb-4b005905a509",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.524Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"state": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"country": {
+					"id": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"name": "Brasil",
+					"abbreviation": "BR",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "country",
+					"showField": "BRASIL - BR"
+				},
+				"city": {
+					"id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+					"name": "Marília",
+					"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"createdDate": "2021-03-15T12:23:06.665021Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.665021Z",
+					"_discriminator": "city",
+					"showField": "MARILIA"
+				}
+			},
+			"complementary": {
+				"id": "439705c6-a2cb-4ec3-b419-21205c1ec6dc",
+				"validation": {
+					"id": "75953b41-fe96-4e61-94ce-af7d0d83386e",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.513Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"ethnicity": {
+					"id": "15fbe42e-f112-4ad5-8c35-62c4d85ba676",
+					"code": 4,
+					"name": "Parda",
+					"eSocialRacialType": "BROWN",
+					"enabled": "ACTIVE",
+					"_discriminator": "ethnicity",
+					"showField": "PARDA"
+				},
+				"degreeOfEducationFileId": "10678CB76D8C4E17AF1C92525E2DE0E4/1.jpg",
+				"degreeOfEducationFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/10678CB76D8C4E17AF1C92525E2DE0E4/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=29b245da06f04c391a557d03ccf55d91d889a970a33f626eb1938f23b956af54",
+				"degreeOfEducationFileUploadDate": "2025-06-12T22:22:09.294Z",
+				"maritalStatus": {
+					"key": "DIVORCED",
+					"value": "DIVORCIADO"
+				},
+				"degreeOfEducation": {
+					"id": "f185df3a-fa94-44fd-956c-161e851a5fa5",
+					"code": 7,
+					"name": "Ensino Médio Completo",
+					"type": "HIGH_SCHOOL_COMPLETED",
+					"createdDate": "2021-03-15T12:23:05.458326Z",
+					"lastModifiedDate": "2021-03-15T12:23:05.458326Z",
+					"_discriminator": "degreeOfEducation",
+					"showField": "ENSINO MEDIO COMPLETO"
+				},
+				"nationality": {
+					"id": "02b14911-7bf8-42d4-98bb-89ced60bf1ce",
+					"code": 10,
+					"name": "Brasileiro",
+					"type": "BRAZILIAN",
+					"createdDate": "2021-03-15T12:23:06.442698Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.442698Z",
+					"_discriminator": "nationality",
+					"showField": "BRASILEIRO"
+				}
+			},
+			"email": {
+				"id": "c0515f92-4365-4fc8-b58e-7837c9ffabe0",
+				"validation": {
+					"id": "d7cb1fc4-b7ea-4e4e-a060-c5215a0b835d",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.592Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"firstType": {
+					"key": "PERSONAL_EMAIL",
+					"value": "E-MAIL PESSOAL"
+				},
+				"firstEmail": "josecar.luiz@gmail.com"
+			},
+			"telephone": {
+				"id": "6e31ce64-39f6-49bf-b551-4f6d8d61e885",
+				"validation": {
+					"id": "6d322611-59a1-43e9-b043-2cf5bad8c2af",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.592Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"firstType": {
+					"key": "CELLPHONE",
+					"value": "CELULAR"
+				},
+				"firstPhone": "5514997426311",
+				"secondType": {
+					"key": "CELLPHONE",
+					"value": "CELULAR"
+				},
+				"secondPhone": "5514997774349",
+				"firstPhoneCountryId": "br",
+				"secondPhoneCountryId": "br"
+			},
+			"disability": {
+				"hasDisability": false
+			}
+		},
+		"document": {
+			"hiringMedicalExam": {},
+			"bankAccount": {},
+			"civilCertificate": {
+				"id": "2700d349-767f-49f3-b5b9-1c230ecfdf7d",
+				"validation": {
+					"id": "6dcf4e59-79f7-473d-a105-bd6912850767",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:32.029Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"issueDate": "1985-08-16",
+				"registry": "",
+				"firstFileId": "33C1DA482B574CEE9F3643D2439898D7/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/33C1DA482B574CEE9F3643D2439898D7/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=aa01534f0863da5e799de81ddf3b0812c2a1c816902c5755e9f7b9c2b7c4ffa5",
+				"firstFileUploadDate": "2025-06-12T23:20:12.586Z",
+				"secondFileId": "5BBD7B09F0D04DAD813F9F544AD0BA0A/1.jpg",
+				"secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/5BBD7B09F0D04DAD813F9F544AD0BA0A/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6aeb67ff56c1a2551d2d02b08f1671f5b21840071ad9f82b071fabe4752ff1f8",
+				"secondFileUploadDate": "2025-06-12T23:20:25.31Z",
+				"type": {
+					"key": "BIRTH_CERTIFICATE",
+					"value": "CERTIDAO DE NASCIMENTO"
+				},
+				"term": "10310",
+				"book": "A-9",
+				"sheet": "524",
+				"issuerState": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"issuerCity": {
+					"id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+					"name": "Marília",
+					"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"createdDate": "2021-03-15T12:23:06.665021Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.665021Z",
+					"_discriminator": "city",
+					"showField": "MARILIA"
+				}
+			},
+			"cnh": {},
+			"cns": {
+				"id": "a4df566a-a870-4ab1-9d8d-f952d911ec95",
+				"validation": {
+					"id": "bf7faaac-4ef5-4bc2-b697-601f2901b037",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:32.032Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"number": "701001854660791",
+				"firstFileId": "6C5BF3128C814425BAAE7C920305CACA/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/6C5BF3128C814425BAAE7C920305CACA/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3c06ba6a6ff242444b5a34ede5e4b40dbf9b93f3b4f69a318fbd00dfaeb7768f",
+				"firstFileUploadDate": "2025-06-12T22:45:40Z"
+			},
+			"cpf": {
+				"id": "9cfa387f-9f92-4d74-b1ae-53ea46c288b8",
+				"validation": {
+					"id": "ac403d84-dca4-401c-9ff3-bddaa5bceb16",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.602Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"firstFileId": "AC3D710255E24C8BBA8CDF0AA08243C5/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/AC3D710255E24C8BBA8CDF0AA08243C5/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3c80b43f1a888baaa1552ff498719485b2efdc552a19a565321c8bdb71d4d23f",
+				"firstFileUploadDate": "2025-06-12T22:24:26.019Z",
+				"number": "09075815875"
+			},
+			"ctps": {
+				"id": "8f118e99-d988-432f-ab1b-6ad7d22ffb9d",
+				"validation": {
+					"id": "e9f50cff-6c89-43dc-a169-027214691e18",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.617Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"firstFileId": "D6D4E9A5C08B400C91F5808BB0BA8E22/ctpscontratosdigitais_.pdf",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/D6D4E9A5C08B400C91F5808BB0BA8E22/ctpscontratosdigitais_.pdf%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=49f323ba38d978c2744eac0f13757631d45f5bc575289c597e74fd8696f8cec6",
+				"firstFileUploadDate": "2025-06-14T14:52:28.497Z",
+				"secondFileId": "E2256021DFBA4A25AE862DEA79A98A00/ctpscontratosdigitais_.pdf",
+				"secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/E2256021DFBA4A25AE862DEA79A98A00/ctpscontratosdigitais_.pdf%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c7b8e22e2f7abe1155cb81bb547bab9d3f85032539b821195441070f164e6f55",
+				"secondFileUploadDate": "2025-06-14T14:53:04.848Z",
+				"number": "0907581",
+				"serie": "5875",
+				"issuerState": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"issueDate": "2025-06-14",
+				"isDigital": true
+			},
+			"dnv": {},
+			"passport": {},
+			"pis": {
+				"id": "78df496a-a0de-4e4f-b06b-819b3f523e1f",
+				"validation": {
+					"id": "9cdba6d2-2ea3-4a1f-9db7-cc32bddf646c",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.611Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"firstFileId": "574B9B60C8F9439FAF0A0C9BD069B68F/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/574B9B60C8F9439FAF0A0C9BD069B68F/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=820442ea65b7fa49873de0c4e1f63593768ea8e1e44755a87ca1d0a4772b7ee5",
+				"firstFileUploadDate": "2025-06-12T22:28:36.538Z",
+				"number": "12185018827",
+				"issueDate": "1985-03-19"
+			},
+			"professionalRecord": {},
+			"reservist": {
+				"id": "b6c3d824-7c18-46f9-b93c-7e6c61be7f7e",
+				"validation": {
+					"id": "5c8e1fcf-3a1c-43b4-af74-97fc44a3ef4d",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.623Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"exemptionDate": "1986-11-03",
+				"firstFileId": "BB40CADC92764AA098786AF97BB2A24C/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/BB40CADC92764AA098786AF97BB2A24C/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ce6fbbea4aa7989206b7a3d8933515a8fef7e5c875c0d3b1cc18ab77b071f985",
+				"firstFileUploadDate": "2025-06-12T22:40:00.107Z",
+				"secondFileId": "B0B007F3614942E38D22310D7597A391/1.jpg",
+				"secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/B0B007F3614942E38D22310D7597A391/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=69d9882b08e7df6cc93a7e0a1b57a8495a6cacd03e47cec18df841b36a3d14e9",
+				"secondFileUploadDate": "2025-06-12T22:40:03.097Z",
+				"number": "963215",
+				"serie": "A",
+				"ra": "060922086917",
+				"doesntHave": false
+			},
+			"rg": {
+				"id": "7aa45d08-fc8a-4938-b1c0-5cf468599c13",
+				"validation": {
+					"id": "2fdcb00a-5455-4e40-864b-22e2c3a42ae6",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.617Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"number": "20093889",
+				"firstFileId": "93068289683344ECABBF2644317F6A08/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/93068289683344ECABBF2644317F6A08/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4793300e19c79b24fc9030be599779120eb1a2203192d375d13ee73faf0f7c06",
+				"firstFileUploadDate": "2025-06-12T22:31:52.875Z",
+				"issueDate": "1985-08-26",
+				"secondFileId": "EB94BB0B7C1A4120B178BDB02D2603BC/1.jpg",
+				"secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/EB94BB0B7C1A4120B178BDB02D2603BC/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ecbac16edd215986dd447066d742fbde5b065633c9241553b9ac7ba3edc835b5",
+				"secondFileUploadDate": "2025-06-12T22:32:54.87Z",
+				"birthDate": "1967-04-25",
+				"issuerState": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"mothersName": "MARIA DA GLORIA",
+				"fathersName": "JOAO LUIZ",
+				"doesntHave": false
+			},
+			"ric": {},
+			"rne": {},
+			"voter": {
+				"id": "e78f6350-12d0-4ac3-8b79-8c7bc31d6a67",
+				"validation": {
+					"id": "73548f5c-8478-41fb-a0d9-6f44fbad9b9f",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:31.622Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				},
+				"issuerState": {
+					"id": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"name": "São Paulo",
+					"abbreviation": "SP",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"createdDate": "2021-03-15T12:23:06.489848Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.489848Z",
+					"_discriminator": "state",
+					"showField": "SAO PAULO - SP"
+				},
+				"firstFileId": "5ADFA99F7B92456BA4AF31DF8848A7C8/1.jpg",
+				"firstFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/5ADFA99F7B92456BA4AF31DF8848A7C8/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=894bff0a4f5be2164d64aedac872103890d9b2d54135e505d660eb4e39192623",
+				"firstFileUploadDate": "2025-06-12T22:36:15.58Z",
+				"secondFileId": "9986D16BF6F44C66BC9AD6377E947F85/1.jpg",
+				"secondFilePermanentUrl": "https://br-com-senior-blob-service-storage.s3.sa-east-1.amazonaws.com/doricombr/perm/hcm/onboarding/9986D16BF6F44C66BC9AD6377E947F85/1.jpg%40512x512k?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250616T130636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA3KDZUIYA56LOKIXE%2F20250616%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Signature=dea6df2b77e4b3ef3946a53fe8e9911e8b14d301a7ebae4611c61989bbbf89c5",
+				"secondFileUploadDate": "2025-06-12T22:37:12.035Z",
+				"number": "029225920124",
+				"votingDistrict": "070",
+				"votingSection": "0172",
+				"issuerCity": {
+					"id": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+					"name": "Marília",
+					"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"createdDate": "2021-03-15T12:23:06.665021Z",
+					"lastModifiedDate": "2021-03-15T12:23:06.665021Z",
+					"_discriminator": "city",
+					"showField": "MARILIA"
+				},
+				"issueDate": "2019-12-12"
+			},
+			"isForeign": {
+				"key": "NO",
+				"value": "NO"
+			}
+		},
+		"customEntityData": {
+			"customEntityTwo": {},
+			"customEntityThree": {},
+			"customEntityOne": {
+				"id": "2895fdd5-79c6-4a99-9f3e-d91d962f50fc",
+				"customFields": [
+					{
+						"field": "sindicato",
+						"value": "Nâo"
+					},
+					{
+						"field": "usaVt",
+						"value": "Sim"
+					},
+					{
+						"field": "refeitorio",
+						"value": "Sim"
+					},
+					{
+						"field": "qtdVt",
+						"value": "2"
+					}
+				],
+				"validation": {
+					"id": "47404e44-56c1-4b17-96f9-3b0cbd131ca5",
+					"validated": true,
+					"validationUser": "jgbraga@dori.com.br",
+					"validationDate": "2025-06-16T13:06:32.102Z",
+					"validationUserName": "JULIA GONCALVES BRAGA"
+				}
+			}
+		},
+		"contract": {
+			"employeeContractType": {
+				"key": "EMPLOYEE",
+				"value": "1 - Empregado"
+			},
+			"eSocialCategory": {
+				"key": "CATEGORY_101",
+				"value": "101 - Empregado - Geral, inclusive o empregado público da administração direta ou indireta contratado pela CLT"
+			},
+			"unemploymentInsuranceType": {
+				"key": "NOT_CONSULTED",
+				"value": "Não consultado"
+			},
+			"sefipCategoryType": {
+				"key": "TYPE_01",
+				"value": "Empregado"
+			},
+			"employeeType": {
+				"key": "EMPLOYEE",
+				"value": "1 - Colaborador"
+			},
+			"raisType": {
+				"key": "TYPE_10",
+				"value": "10 - CLT Urbano Indet.P.Jurid"
+			},
+			"company": {
+				"id": "6247905e-8e83-4168-8179-44733689f623",
+				"companyName": "DORI ALIMENTOS S A",
+				"code": "0001",
+				"enabled": "ACTIVE",
+				"createdBy": "admin",
+				"createdDate": "2021-03-15T12:32:09.786Z",
+				"lastModifiedBy": "bridge_default_anonymous_user",
+				"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+				"_discriminator": "company",
+				"showField": "0001 - DORI ALIMENTOS S A"
+			},
+			"costCenter": {
+				"id": "75682888-72f1-4ec6-88fe-0cb464fdf660",
+				"code": "11001109",
+				"name": "EMPACOTAMENTO I",
+				"enabled": "ACTIVE",
+				"company": {
+					"id": "6247905e-8e83-4168-8179-44733689f623",
+					"companyName": "DORI ALIMENTOS S A",
+					"code": "0001",
+					"enabled": "ACTIVE",
+					"createdBy": "admin",
+					"createdDate": "2021-03-15T12:32:09.786Z",
+					"lastModifiedBy": "bridge_default_anonymous_user",
+					"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+					"_discriminator": "company"
+				},
+				"createdBy": "senior.suporte@dori.com.br",
+				"createdDate": "2025-04-01T20:02:42.587Z",
+				"lastModifiedBy": "senior.suporte@dori.com.br",
+				"lastModifiedDate": "2025-04-01T20:02:42.587Z",
+				"_discriminator": "costCenter",
+				"showField": "11001109 - EMPACOTAMENTO I"
+			},
+			"workstationGroup": {
+				"id": "7d398ef9-3a43-4fef-82c7-b043b5d87f90",
+				"code": "002468",
+				"name": "AUXILIAR DE LINHA DE PRODUÇÃO",
+				"enabled": "ACTIVE",
+				"company": {
+					"id": "6247905e-8e83-4168-8179-44733689f623",
+					"companyName": "DORI ALIMENTOS S A",
+					"code": "0001",
+					"enabled": "ACTIVE",
+					"createdBy": "admin",
+					"createdDate": "2021-03-15T12:32:09.786Z",
+					"lastModifiedBy": "bridge_default_anonymous_user",
+					"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+					"_discriminator": "company",
+					"showField": "0001 - DORI ALIMENTOS S A"
+				},
+				"branchOffice": {
+					"id": "c917bf3d-17d1-4a7c-84a2-c107dd05d3bb",
+					"company": {
+						"id": "6247905e-8e83-4168-8179-44733689f623",
+						"companyName": "DORI ALIMENTOS S A",
+						"code": "0001",
+						"enabled": "ACTIVE",
+						"createdBy": "admin",
+						"createdDate": "2021-03-15T12:32:09.786Z",
+						"lastModifiedBy": "bridge_default_anonymous_user",
+						"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+						"_discriminator": "company"
+					},
+					"branchOfficeName": "DORI ALIMENTOS S. A.",
+					"tradingName": "UN10 - MATRIZ MARILIA",
+					"enabled": "ACTIVE",
+					"code": "0001",
+					"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+					"cep": "17.512-035",
+					"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+					"city": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+					"neighborhood": "Distrito Industrial Santo Barion",
+					"addressType": "AVENUE",
+					"address": "REPUBLICA",
+					"number": "5159",
+					"cnpj": "52123916000132",
+					"createdBy": "senior.suporte@dori.com.br",
+					"createdDate": "2025-04-01T19:49:39.927Z",
+					"lastModifiedBy": "ksteruel@dori.com.br",
+					"lastModifiedDate": "2025-06-09T14:35:50.871Z",
+					"custom": {
+						"nacionalidadeResponsavel": "BRASILEIRA",
+						"identidadeResponsavel": "29.640.490-1",
+						"estadoCivilResponsavel": "CASADA",
+						"nomeResponsavel": "CRISTIANE LOCATELLI DELGADO"
+					},
+					"_discriminator": "branchOffice",
+					"showField": "0001 - UN10 - MATRIZ MARILIA"
+				},
+				"costCenter": {
+					"id": "75682888-72f1-4ec6-88fe-0cb464fdf660",
+					"code": "11001109",
+					"name": "EMPACOTAMENTO I",
+					"enabled": "ACTIVE",
+					"company": {
+						"id": "6247905e-8e83-4168-8179-44733689f623",
+						"companyName": "DORI ALIMENTOS S A",
+						"code": "0001",
+						"enabled": "ACTIVE",
+						"createdBy": "admin",
+						"createdDate": "2021-03-15T12:32:09.786Z",
+						"lastModifiedBy": "bridge_default_anonymous_user",
+						"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+						"_discriminator": "company"
+					},
+					"createdBy": "senior.suporte@dori.com.br",
+					"createdDate": "2025-04-01T20:02:42.587Z",
+					"lastModifiedBy": "senior.suporte@dori.com.br",
+					"lastModifiedDate": "2025-04-01T20:02:42.587Z",
+					"_discriminator": "costCenter",
+					"showField": "11001109 - EMPACOTAMENTO I"
+				},
+				"createdBy": "senior.suporte@dori.com.br",
+				"createdDate": "2025-05-14T23:32:39.582Z",
+				"lastModifiedBy": "senior.suporte@dori.com.br",
+				"lastModifiedDate": "2025-05-14T23:32:39.582Z",
+				"_discriminator": "workstationGroup",
+				"showField": "002468 - AUXILIAR DE LINHA DE PRODUCAO"
+			},
+			"branchOffice": {
+				"id": "c917bf3d-17d1-4a7c-84a2-c107dd05d3bb",
+				"company": {
+					"id": "6247905e-8e83-4168-8179-44733689f623",
+					"companyName": "DORI ALIMENTOS S A",
+					"code": "0001",
+					"enabled": "ACTIVE",
+					"createdBy": "admin",
+					"createdDate": "2021-03-15T12:32:09.786Z",
+					"lastModifiedBy": "bridge_default_anonymous_user",
+					"lastModifiedDate": "2025-06-16T03:10:00.098Z",
+					"_discriminator": "company"
+				},
+				"branchOfficeName": "DORI ALIMENTOS S. A.",
+				"tradingName": "UN10 - MATRIZ MARILIA",
+				"enabled": "ACTIVE",
+				"code": "0001",
+				"country": "9aab9cee-1116-4abd-b043-3c30c6b2bc62",
+				"cep": "17.512-035",
+				"state": "d6ed5b2f-fe78-4055-82af-7c688dd148cc",
+				"city": "5eda7b32-e966-4c6e-bd07-21509c66de79",
+				"neighborhood": "Distrito Industrial Santo Barion",
+				"addressType": "AVENUE",
+				"address": "REPUBLICA",
+				"number": "5159",
+				"cnpj": "52123916000132",
+				"createdBy": "senior.suporte@dori.com.br",
+				"createdDate": "2025-04-01T19:49:39.927Z",
+				"lastModifiedBy": "ksteruel@dori.com.br",
+				"lastModifiedDate": "2025-06-09T14:35:50.871Z",
+				"custom": {
+					"nacionalidadeResponsavel": "BRASILEIRA",
+					"identidadeResponsavel": "29.640.490-1",
+					"estadoCivilResponsavel": "CASADA",
+					"nomeResponsavel": "CRISTIANE LOCATELLI DELGADO"
+				},
+				"_discriminator": "branchOffice",
+				"showField": "0001 - UN10 - MATRIZ MARILIA"
+			},
+			"jobPosition": {
+				"id": "2fea6c17-6cd5-4dc5-b5e6-b1cb26ff3082",
+				"name": "AUXILIAR DE LINHA DE PRODUÇÃO",
+				"enabled": "ACTIVE",
+				"code": "70190",
+				"createdBy": "senior.suporte@dori.com.br",
+				"createdDate": "2025-04-01T18:54:15.841Z",
+				"lastModifiedBy": "senior.suporte@dori.com.br",
+				"lastModifiedDate": "2025-04-01T18:54:15.841Z",
+				"_discriminator": "jobPosition",
+				"showField": "70190 - AUXILIAR DE LINHA DE PRODUCAO"
+			},
+			"customFields": [
+				{
+					"field": "salario",
+					"value": "2196"
+				},
+				{
+					"field": "escala",
+					"value": "49"
+				},
+				{
+					"field": "sindicato",
+					"value": "3"
+				},
+				{
+					"field": "salarioExtenso"
+				},
+				{
+					"field": "refeicao"
+				},
+				{
+					"field": "formated_cpf"
+				},
+				{
+					"field": "escala_contrato4"
+				},
+				{
+					"field": "formated_cnpj"
+				},
+				{
+					"field": "contribuicaoSindical"
+				},
+				{
+					"field": "vencimentoContrato"
+				},
+				{
+					"field": "valeTransporte"
+				},
+				{
+					"field": "escala_contrato1"
+				},
+				{
+					"field": "uf_filial"
+				}
+			]
+		},
+		"saveAsDraft": true
+	},
+	"output": {
+		"result": true
+	}
+}
+					}
+				},
+				"environmentVariables": {}
+			}
+		},
+		{
+			"type": "aws-sam",
+			"request": "direct-invoke",
+			"invokeTarget": {
+				"target": "code",
+				"lambdaHandler": "index.handler",
+				"projectRoot": "f0WBzzfksHIdHcmVacationmanagementValidateVacationSchedule"
+			},
+			"lambda": {
+				"runtime": "nodejs14.x",
+				"payload": {
+					"json": {
+						"headers": {
+							"Authorization": "bearer EvXblf42DjzExrEqk9fPxNF4ikv7Ny78"
+						},
+						"body": {
+							"input": {
+								"vacationSchedules": [
+									{
+										"employeeId": "735F8768B1D14E13B4B203B9DBA6AD37",
+										"vacationPeriodId": "1A7E82F62B6B4C73B2C52A4C9554DAC3",
+										"startDate": "2025-01-02",
+										"vacationDays": 15,
+										"vacationBonusDays": 10,
+										"has13thSalaryAdvance": false
+									}
+								]
+							},
+							"output": {
+								"vacationScheduleMessages": [
+									{
+										"employeeId": "735F8768B1D14E13B4B203B9DBA6AD37",
+										"vacationPeriodId": "1A7E82F62B6B4C73B2C52A4C9554DAC3",
+										"startDate": "2025-01-02",
+										"validationMessages": [
+											{
+												"type": "TYPE_1_VACATION_SCHEDULING_IN_ADVANCE",
+												"message": "É necessário solicitar as férias com no mínimo 30 dias de antecedência"
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				}
+			},
+			"sam": {
+				"containerBuild": false,
+				"skipNewImageCheck": false
+			},
+			"api": {
+				"httpMethod": "get"
+			},
+			"name": "Vacantion Schedule"
+		}
+	]
 }
